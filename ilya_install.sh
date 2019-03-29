@@ -15,3 +15,7 @@ sudo cp -fv * /etc/netctl
 # 4 - copy systemctl scripts
 cd ../systemctl
 sudo cp -fv * /etc/systemd/system/
+
+# 5 - yandex disk
+cd ../yandex
+cp -fv * ~/.config/yandex-disk/
