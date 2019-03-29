@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#  _  __          _                         _ 
+# | |/ /         | |                       | |
+# | ' / ___ _   _| |__   ___   __ _ _ __ __| |
+# |  < / _ \ | | | '_ \ / _ \ / _` | '__/ _` |
+# | . \  __/ |_| | |_) | (_) | (_| | | | (_| |
+# |_|\_\___|\__, |_.__/ \___/ \__,_|_|  \__,_|
+#            __/ |                            
+#           |___/                             
+#
+# This script is called by i3 on startup.
+
+#1) set the layout
+setxkbmap -layout gb
+
+#2) Increase key speed via a rate change
+xset r rate 300 50
+
+#3) rempapping key functionality
+#a) clear any functionality of the lock
+xmodmap -e "clear lock"
+#b) unhook control for the time being
+xmodmap -e "remove control = Control_L"
+#c) assing control_l keysym to the capslock key
+xmodmap -e "keycode 66 = Control_L"
+#d) rebind control_l
+xmodmap -e "add control = Control_L"
+
+#e) reassign the right AltGr to the Meta key (mod1)
+xmodmap -e "remove mod5 = ISO_Level3_Shift"
+xmodmap -e "add mod1 = ISO_Level3_Shift"

@@ -1,0 +1,12 @@
+[Unit]
+Descrition=Timer for the macmini
+Requires=jager.service
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=20
+Unit=jager.service
+WakeSystem=true
+
+[Install]
+WantedBy=multi-user.target

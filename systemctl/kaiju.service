@@ -1,0 +1,14 @@
+#this will start the jager (macmini) service
+
+[Unit]
+Description=Open portal to vlad
+After=sshd.service
+Requires=sshd.service
+
+[Service]
+TimeoutStartSec=7
+Type=forking
+ExecStart=~/.ilya_scripts/kaiju.sh
+
+[Install]
+WantedBy=multi-user.target

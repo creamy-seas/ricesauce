@@ -1,0 +1,12 @@
+[Unit]
+Description=Boomer USA timer
+Requires=boomer_usa.service
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=600
+Unit=boomer_usa.service
+WakeSystem=true
+
+[Install]
+WantedBy=multi-user.target

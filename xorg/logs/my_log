@@ -1,0 +1,791 @@
+[    16.052] (WW) Failed to open protocol names file lib/xorg/protocol.txt
+[    16.052] 
+X.Org X Server 1.20.3
+X Protocol Version 11, Revision 0
+[    16.052] Build Operating System: Linux Arch Linux
+[    16.052] Current Operating System: Linux phgpuxtreme 4.20.7-arch1-1-ARCH #1 SMP PREEMPT Wed Feb 6 18:42:40 UTC 2019 x86_64
+[    16.052] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=63e43ef4-7d43-4705-ad4f-c4404f885a18 rw quiet
+[    16.052] Build Date: 25 October 2018  04:42:32PM
+[    16.052]  
+[    16.052] Current version of pixman: 0.36.0
+[    16.052] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    16.052] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    16.052] (==) Log file: "/var/log/Xorg.0.log", Time: Thu Feb 14 14:12:55 2019
+[    16.053] (==) Using config file: "/etc/X11/xorg.conf"
+[    16.053] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    16.054] (==) ServerLayout "creamy-seas configuration"
+[    16.054] (**) |-->Screen "screen0" (0)
+[    16.054] (**) |   |-->Monitor "large_samsung"
+[    16.055] (**) |   |-->Device "radeon0"
+[    16.055] (**) |-->Screen "screen1" (1)
+[    16.055] (**) |   |-->Monitor "small_block_1"
+[    16.055] (**) |   |-->Device "radeon1"
+[    16.055] (**) |-->Screen "screen2" (2)
+[    16.055] (**) |   |-->Monitor "small_block_2"
+[    16.055] (**) |   |-->Device "radeon2"
+[    16.055] (**) |-->Input Device "whiteMouse"
+[    16.055] (**) |-->Input Device "clickyKeyboard"
+[    16.055] (==) Automatically adding devices
+[    16.055] (==) Automatically enabling devices
+[    16.055] (==) Automatically adding GPU devices
+[    16.055] (==) Automatically binding GPU devices
+[    16.055] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    16.058] (WW) The directory "/usr/share/fonts/misc" does not exist.
+[    16.058] 	Entry deleted from font path.
+[    16.058] (WW) The directory "/usr/share/fonts/OTF" does not exist.
+[    16.058] 	Entry deleted from font path.
+[    16.058] (WW) The directory "/usr/share/fonts/Type1" does not exist.
+[    16.058] 	Entry deleted from font path.
+[    16.058] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[    16.058] 	Entry deleted from font path.
+[    16.058] (WW) The directory "/usr/share/fonts/75dpi" does not exist.
+[    16.058] 	Entry deleted from font path.
+[    16.058] (**) FontPath set to:
+	/usr/share/fonts/TTF,
+	/usr/share/fonts/TTF
+[    16.058] (**) ModulePath set to "/usr/lib/xorg/modules"
+[    16.058] (WW) Hotplugging is on, devices using drivers 'kbd', 'mouse' or 'vmmouse' will be disabled.
+[    16.058] (WW) Disabling whiteMouse
+[    16.058] (WW) Disabling clickyKeyboard
+[    16.058] (II) Module ABI versions:
+[    16.058] 	X.Org ANSI C Emulation: 0.4
+[    16.058] 	X.Org Video Driver: 24.0
+[    16.058] 	X.Org XInput driver : 24.1
+[    16.058] 	X.Org Server Extension : 10.0
+[    16.059] (++) using VT number 1
+
+[    16.060] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_31
+[    16.060] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    16.061] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 10 paused 0
+[    16.061] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    16.061] (II) systemd-logind: got fd for /dev/dri/card1 226:1 fd 11 paused 0
+[    16.064] (--) PCI:*(8@0:0:0) 1002:6779:174b:e206 rev 0, Mem @ 0xe0000000/268435456, 0xf7920000/131072, I/O @ 0x0000e000/256, BIOS @ 0x????????/131072
+[    16.064] (--) PCI: (9@0:0:0) 10de:1b30:10de:11a0 rev 161, Mem @ 0xf6000000/16777216, 0xc0000000/268435456, 0xd0000000/33554432, I/O @ 0x0000d000/128, BIOS @ 0x????????/524288
+[    16.064] (WW) Open ACPI failed (/var/run/acpid.socket) (No such file or directory)
+[    16.064] (II) "glx" will be loaded. This was enabled by default and also specified in the config file.
+[    16.064] (II) LoadModule: "glx"
+[    16.067] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    16.079] (II) Module glx: vendor="X.Org Foundation"
+[    16.079] 	compiled for 1.20.3, module version = 1.0.0
+[    16.079] 	ABI class: X.Org Server Extension, version 10.0
+[    16.079] (II) LoadModule: "radeon"
+[    16.079] (II) Loading /usr/lib/xorg/modules/drivers/radeon_drv.so
+[    16.084] (II) Module radeon: vendor="X.Org Foundation"
+[    16.084] 	compiled for 1.20.1, module version = 18.1.0
+[    16.084] 	Module class: X.Org Video Driver
+[    16.084] 	ABI class: X.Org Video Driver, version 24.0
+[    16.084] (II) RADEON: Driver for ATI/AMD Radeon chipsets:
+	ATI Radeon Mobility X600 (M24), ATI FireMV 2400,
+	ATI Radeon Mobility X300 (M24), ATI FireGL M24 GL,
+	ATI Radeon X600 (RV380), ATI FireGL V3200 (RV380),
+	ATI Radeon IGP320 (A3), ATI Radeon IGP330/340/350 (A4),
+	ATI Radeon 9500, ATI Radeon 9600TX, ATI FireGL Z1, ATI Radeon 9800SE,
+	ATI Radeon 9800, ATI FireGL X2, ATI Radeon 9600, ATI Radeon 9600SE,
+	ATI Radeon 9600XT, ATI FireGL T2, ATI Radeon 9650, ATI FireGL RV360,
+	ATI Radeon 7000 IGP (A4+), ATI Radeon 8500 AIW,
+	ATI Radeon IGP320M (U1), ATI Radeon IGP330M/340M/350M (U2),
+	ATI Radeon Mobility 7000 IGP, ATI Radeon 9000/PRO, ATI Radeon 9000,
+	ATI Radeon X800 (R420), ATI Radeon X800PRO (R420),
+	ATI Radeon X800SE (R420), ATI FireGL X3 (R420),
+	ATI Radeon Mobility 9800 (M18), ATI Radeon X800 SE (R420),
+	ATI Radeon X800XT (R420), ATI Radeon X800 VE (R420),
+	ATI Radeon X850 (R480), ATI Radeon X850 XT (R480),
+	ATI Radeon X850 SE (R480), ATI Radeon X850 PRO (R480),
+	ATI Radeon X850 XT PE (R480), ATI Radeon Mobility M7,
+	ATI Mobility FireGL 7800 M7, ATI Radeon Mobility M6,
+	ATI FireGL Mobility 9000 (M9), ATI Radeon Mobility 9000 (M9),
+	ATI Radeon 9700 Pro, ATI Radeon 9700/9500Pro, ATI FireGL X1,
+	ATI Radeon 9800PRO, ATI Radeon 9800XT,
+	ATI Radeon Mobility 9600/9700 (M10/M11),
+	ATI Radeon Mobility 9600 (M10), ATI Radeon Mobility 9600 (M11),
+	ATI FireGL Mobility T2 (M10), ATI FireGL Mobility T2e (M11),
+	ATI Radeon, ATI FireGL 8700/8800, ATI Radeon 8500, ATI Radeon 9100,
+	ATI Radeon 7500, ATI Radeon VE/7000, ATI ES1000,
+	ATI Radeon Mobility X300 (M22), ATI Radeon Mobility X600 SE (M24C),
+	ATI FireGL M22 GL, ATI Radeon X800 (R423), ATI Radeon X800PRO (R423),
+	ATI Radeon X800LE (R423), ATI Radeon X800SE (R423),
+	ATI Radeon X800 XTP (R430), ATI Radeon X800 XL (R430),
+	ATI Radeon X800 SE (R430), ATI Radeon X800 (R430),
+	ATI FireGL V7100 (R423), ATI FireGL V5100 (R423),
+	ATI FireGL unknown (R423), ATI Mobility FireGL V5000 (M26),
+	ATI Mobility Radeon X700 XL (M26), ATI Mobility Radeon X700 (M26),
+	ATI Radeon X550XTX, ATI Radeon 9100 IGP (A5),
+	ATI Radeon Mobility 9100 IGP (U3), ATI Radeon XPRESS 200,
+	ATI Radeon XPRESS 200M, ATI Radeon 9250, ATI Radeon 9200,
+	ATI Radeon 9200SE, ATI FireMV 2200, ATI Radeon X300 (RV370),
+	ATI Radeon X600 (RV370), ATI Radeon X550 (RV370),
+	ATI FireGL V3100 (RV370), ATI FireMV 2200 PCIE (RV370),
+	ATI Radeon Mobility 9200 (M9+), ATI Mobility Radeon X800 XT (M28),
+	ATI Mobility FireGL V5100 (M28), ATI Mobility Radeon X800 (M28),
+	ATI Radeon X850, ATI unknown Radeon / FireGL (R480),
+	ATI Radeon X800XT (R423), ATI FireGL V5000 (RV410),
+	ATI Radeon X700 XT (RV410), ATI Radeon X700 PRO (RV410),
+	ATI Radeon X700 SE (RV410), ATI Radeon X700 (RV410),
+	ATI Radeon X1800, ATI Mobility Radeon X1800 XT,
+	ATI Mobility Radeon X1800, ATI Mobility FireGL V7200,
+	ATI FireGL V7200, ATI FireGL V5300, ATI Mobility FireGL V7100,
+	ATI FireGL V7300, ATI FireGL V7350, ATI Radeon X1600, ATI RV505,
+	ATI Radeon X1300/X1550, ATI Radeon X1550, ATI M54-GL,
+	ATI Mobility Radeon X1400, ATI Radeon X1550 64-bit,
+	ATI Mobility Radeon X1300, ATI Radeon X1300, ATI FireGL V3300,
+	ATI FireGL V3350, ATI Mobility Radeon X1450,
+	ATI Mobility Radeon X2300, ATI Mobility Radeon X1350,
+	ATI FireMV 2250, ATI Radeon X1650, ATI Mobility FireGL V5200,
+	ATI Mobility Radeon X1600, ATI Radeon X1300 XT/X1600 Pro,
+	ATI FireGL V3400, ATI Mobility FireGL V5250,
+	ATI Mobility Radeon X1700, ATI Mobility Radeon X1700 XT,
+	ATI FireGL V5200, ATI Radeon X2300HD, ATI Mobility Radeon HD 2300,
+	ATI Radeon X1950, ATI Radeon X1900, ATI AMD Stream Processor,
+	ATI RV560, ATI Mobility Radeon X1900, ATI Radeon X1950 GT, ATI RV570,
+	ATI FireGL V7400, ATI Radeon 9100 PRO IGP,
+	ATI Radeon Mobility 9200 IGP, ATI Radeon X1200, ATI RS740,
+	ATI RS740M, ATI Radeon HD 2900 XT, ATI Radeon HD 2900 Pro,
+	ATI Radeon HD 2900 GT, ATI FireGL V8650, ATI FireGL V8600,
+	ATI FireGL V7600, ATI Radeon 4800 Series, ATI Radeon HD 4870 x2,
+	ATI Radeon HD 4850 x2, ATI FirePro V8750 (FireGL),
+	ATI FirePro V7760 (FireGL), ATI Mobility RADEON HD 4850,
+	ATI Mobility RADEON HD 4850 X2, ATI FirePro RV770,
+	AMD FireStream 9270, AMD FireStream 9250, ATI FirePro V8700 (FireGL),
+	ATI Mobility RADEON HD 4870, ATI Mobility RADEON M98,
+	ATI FirePro M7750, ATI M98, ATI Mobility Radeon HD 4650,
+	ATI Radeon RV730 (AGP), ATI Mobility Radeon HD 4670,
+	ATI FirePro M5750, ATI RV730XT [Radeon HD 4670], ATI RADEON E4600,
+	ATI Radeon HD 4600 Series, ATI RV730 PRO [Radeon HD 4650],
+	ATI FirePro V7750 (FireGL), ATI FirePro V5700 (FireGL),
+	ATI FirePro V3750 (FireGL), ATI Mobility Radeon HD 4830,
+	ATI Mobility Radeon HD 4850, ATI FirePro M7740, ATI RV740,
+	ATI Radeon HD 4770, ATI Radeon HD 4700 Series, ATI RV610,
+	ATI Radeon HD 2400 XT, ATI Radeon HD 2400 Pro,
+	ATI Radeon HD 2400 PRO AGP, ATI FireGL V4000, ATI Radeon HD 2350,
+	ATI Mobility Radeon HD 2400 XT, ATI Mobility Radeon HD 2400,
+	ATI RADEON E2400, ATI FireMV 2260, ATI RV670, ATI Radeon HD3870,
+	ATI Mobility Radeon HD 3850, ATI Radeon HD3850,
+	ATI Mobility Radeon HD 3850 X2, ATI Mobility Radeon HD 3870,
+	ATI Mobility Radeon HD 3870 X2, ATI Radeon HD3870 X2,
+	ATI FireGL V7700, ATI Radeon HD3690, AMD Firestream 9170,
+	ATI Radeon HD 4550, ATI Radeon RV710, ATI Radeon HD 4350,
+	ATI Mobility Radeon 4300 Series, ATI Mobility Radeon 4500 Series,
+	ATI FirePro RG220, ATI Mobility Radeon 4330, ATI RV630,
+	ATI Mobility Radeon HD 2600, ATI Mobility Radeon HD 2600 XT,
+	ATI Radeon HD 2600 XT AGP, ATI Radeon HD 2600 Pro AGP,
+	ATI Radeon HD 2600 XT, ATI Radeon HD 2600 Pro, ATI Gemini RV630,
+	ATI Gemini Mobility Radeon HD 2600 XT, ATI FireGL V5600,
+	ATI FireGL V3600, ATI Radeon HD 2600 LE,
+	ATI Mobility FireGL Graphics Processor, ATI Radeon HD 3470,
+	ATI Mobility Radeon HD 3430, ATI Mobility Radeon HD 3400 Series,
+	ATI Radeon HD 3450, ATI Radeon HD 3430, ATI FirePro V3700,
+	ATI FireMV 2450, ATI Radeon HD 3600 Series, ATI Radeon HD 3650 AGP,
+	ATI Radeon HD 3600 PRO, ATI Radeon HD 3600 XT,
+	ATI Mobility Radeon HD 3650, ATI Mobility Radeon HD 3670,
+	ATI Mobility FireGL V5700, ATI Mobility FireGL V5725,
+	ATI Radeon HD 3200 Graphics, ATI Radeon 3100 Graphics,
+	ATI Radeon HD 3300 Graphics, ATI Radeon 3000 Graphics, SUMO, SUMO2,
+	ATI Radeon HD 4200, ATI Radeon 4100, ATI Mobility Radeon HD 4200,
+	ATI Mobility Radeon 4100, ATI Radeon HD 4290, ATI Radeon HD 4250,
+	AMD Radeon HD 6310 Graphics, AMD Radeon HD 6250 Graphics,
+	AMD Radeon HD 6300 Series Graphics,
+	AMD Radeon HD 6200 Series Graphics, PALM, CYPRESS,
+	ATI FirePro (FireGL) Graphics Adapter, AMD Firestream 9370,
+	AMD Firestream 9350, ATI Radeon HD 5800 Series,
+	ATI Radeon HD 5900 Series, ATI Mobility Radeon HD 5800 Series,
+	ATI Radeon HD 5700 Series, ATI Radeon HD 6700 Series,
+	ATI Mobility Radeon HD 5000 Series, ATI Mobility Radeon HD 5570,
+	ATI Radeon HD 5670, ATI Radeon HD 5570, ATI Radeon HD 5500 Series,
+	REDWOOD, ATI Mobility Radeon Graphics, CEDAR, ATI FirePro 2270,
+	ATI Radeon HD 5450, CAYMAN, AMD Radeon HD 6900 Series,
+	AMD Radeon HD 6900M Series, Mobility Radeon HD 6000 Series, BARTS,
+	AMD Radeon HD 6800 Series, AMD Radeon HD 6700 Series, TURKS, CAICOS,
+	ARUBA, TAHITI, PITCAIRN, VERDE, OLAND, HAINAN, BONAIRE, KABINI,
+	MULLINS, KAVERI, HAWAII
+[    16.085] (II) [KMS] Kernel modesetting enabled.
+[    16.085] (II) [KMS] Kernel modesetting enabled.
+[    16.085] (II) [KMS] Kernel modesetting enabled.
+[    16.085] (**) RADEON(0): Depth 24, (--) framebuffer bpp 32
+[    16.085] (II) RADEON(0): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+[    16.085] (==) RADEON(0): Default visual is TrueColor
+[    16.085] (**) RADEON(0): Option "ZaphodHeads" "HDMI-0"
+[    16.085] (==) RADEON(0): RGB weight 888
+[    16.085] (II) RADEON(0): Using 8 bits per RGB (8 bit DAC)
+[    16.085] (--) RADEON(0): Chipset: "CAICOS" (ChipID = 0x6779)
+[    16.086] (II) Loading sub module "fb"
+[    16.086] (II) LoadModule: "fb"
+[    16.086] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    16.087] (II) Module fb: vendor="X.Org Foundation"
+[    16.087] 	compiled for 1.20.3, module version = 1.0.0
+[    16.087] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    16.087] (II) Loading sub module "dri2"
+[    16.087] (II) LoadModule: "dri2"
+[    16.087] (II) Module "dri2" already built-in
+[    16.286] (II) Loading sub module "glamoregl"
+[    16.287] (II) LoadModule: "glamoregl"
+[    16.287] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    16.294] (II) Module glamoregl: vendor="X.Org Foundation"
+[    16.294] 	compiled for 1.20.3, module version = 1.0.1
+[    16.294] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    17.795] (II) RADEON(0): glamor X acceleration enabled on AMD CAICOS (DRM 2.50.0 / 4.20.7-arch1-1-ARCH, LLVM 7.0.1)
+[    17.795] (II) RADEON(0): glamor detected, initialising EGL layer.
+[    17.795] (II) RADEON(0): KMS Color Tiling: enabled
+[    17.795] (II) RADEON(0): KMS Color Tiling 2D: enabled
+[    17.795] (==) RADEON(0): TearFree property default: auto
+[    17.795] (II) RADEON(0): KMS Pageflipping: enabled
+[    17.903] (II) RADEON(0): Output HDMI-0 using monitor section large_samsung
+[    18.004] (II) RADEON(0): EDID for output HDMI-0
+[    18.004] (II) RADEON(0): Manufacturer: SAM  Model: b43  Serial#: 808663095
+[    18.004] (II) RADEON(0): Year: 2015  Week: 9
+[    18.004] (II) RADEON(0): EDID Version: 1.3
+[    18.004] (II) RADEON(0): Digital Display Input
+[    18.004] (II) RADEON(0): Max Image Size [cm]: horiz.: 53  vert.: 30
+[    18.004] (II) RADEON(0): Gamma: 2.20
+[    18.004] (II) RADEON(0): DPMS capabilities: Off
+[    18.004] (II) RADEON(0): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 
+[    18.004] (II) RADEON(0): First detailed timing is preferred mode
+[    18.004] (II) RADEON(0): redX: 0.646 redY: 0.333   greenX: 0.315 greenY: 0.620
+[    18.004] (II) RADEON(0): blueX: 0.151 blueY: 0.065   whiteX: 0.313 whiteY: 0.329
+[    18.004] (II) RADEON(0): Supported established timings:
+[    18.004] (II) RADEON(0): 720x400@70Hz
+[    18.004] (II) RADEON(0): 640x480@60Hz
+[    18.004] (II) RADEON(0): 640x480@67Hz
+[    18.004] (II) RADEON(0): 640x480@72Hz
+[    18.004] (II) RADEON(0): 640x480@75Hz
+[    18.004] (II) RADEON(0): 800x600@56Hz
+[    18.004] (II) RADEON(0): 800x600@60Hz
+[    18.004] (II) RADEON(0): 800x600@72Hz
+[    18.004] (II) RADEON(0): 800x600@75Hz
+[    18.004] (II) RADEON(0): 832x624@75Hz
+[    18.004] (II) RADEON(0): 1024x768@60Hz
+[    18.004] (II) RADEON(0): 1024x768@70Hz
+[    18.004] (II) RADEON(0): 1024x768@75Hz
+[    18.004] (II) RADEON(0): 1280x1024@75Hz
+[    18.004] (II) RADEON(0): 1152x864@75Hz
+[    18.004] (II) RADEON(0): Manufacturer's mask: 0
+[    18.004] (II) RADEON(0): Supported standard timings:
+[    18.004] (II) RADEON(0): #0: hsize: 1152  vsize 864  refresh: 75  vid: 20337
+[    18.004] (II) RADEON(0): #1: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    18.004] (II) RADEON(0): #2: hsize: 1280  vsize 800  refresh: 60  vid: 129
+[    18.004] (II) RADEON(0): #3: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    18.004] (II) RADEON(0): #4: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[    18.004] (II) RADEON(0): #5: hsize: 1600  vsize 900  refresh: 60  vid: 49321
+[    18.004] (II) RADEON(0): #6: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[    18.004] (II) RADEON(0): Supported detailed timing:
+[    18.004] (II) RADEON(0): clock: 148.5 MHz   Image Size:  531 x 299 mm
+[    18.004] (II) RADEON(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[    18.004] (II) RADEON(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    18.004] (II) RADEON(0): Supported detailed timing:
+[    18.004] (II) RADEON(0): clock: 74.2 MHz   Image Size:  531 x 299 mm
+[    18.004] (II) RADEON(0): h_active: 1280  h_sync: 1390  h_sync_end 1430 h_blank_end 1650 h_border: 0
+[    18.004] (II) RADEON(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[    18.004] (II) RADEON(0): Ranges: V min: 50 V max: 75 Hz, H min: 30 H max: 81 kHz, PixClock max 175 MHz
+[    18.004] (II) RADEON(0): Monitor name: S24D300
+[    18.004] (II) RADEON(0): Supported detailed timing:
+[    18.004] (II) RADEON(0): clock: 74.2 MHz   Image Size:  531 x 299 mm
+[    18.004] (II) RADEON(0): h_active: 1280  h_sync: 1720  h_sync_end 1760 h_blank_end 1980 h_border: 0
+[    18.004] (II) RADEON(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[    18.004] (II) RADEON(0): Supported detailed timing:
+[    18.004] (II) RADEON(0): clock: 27.0 MHz   Image Size:  531 x 299 mm
+[    18.004] (II) RADEON(0): h_active: 720  h_sync: 732  h_sync_end 796 h_blank_end 864 h_border: 0
+[    18.004] (II) RADEON(0): v_active: 576  v_sync: 581  v_sync_end 586 v_blanking: 625 v_border: 0
+[    18.004] (II) RADEON(0): Supported detailed timing:
+[    18.004] (II) RADEON(0): clock: 27.0 MHz   Image Size:  531 x 299 mm
+[    18.004] (II) RADEON(0): h_active: 720  h_sync: 736  h_sync_end 798 h_blank_end 858 h_border: 0
+[    18.004] (II) RADEON(0): v_active: 480  v_sync: 489  v_sync_end 495 v_blanking: 525 v_border: 0
+[    18.004] (II) RADEON(0): Number of EDID sections to follow: 1
+[    18.004] (II) RADEON(0): EDID (in hex):
+[    18.004] (II) RADEON(0): 	00ffffffffffff004c2d430b37383330
+[    18.004] (II) RADEON(0): 	0919010380351e782a9ff5a555509e26
+[    18.004] (II) RADEON(0): 	105054bfef80714f81c0810081809500
+[    18.004] (II) RADEON(0): 	a9c0b3000101023a801871382d40582c
+[    18.004] (II) RADEON(0): 	4500132b2100001e011d007251d01e20
+[    18.004] (II) RADEON(0): 	6e285500132b2100001e000000fd0032
+[    18.004] (II) RADEON(0): 	4b1e5111000a202020202020000000fc
+[    18.004] (II) RADEON(0): 	00533234443330300a20202020200196
+[    18.004] (II) RADEON(0): 	020311b14690041f13031265030c0010
+[    18.004] (II) RADEON(0): 	00011d00bc52d01e20b8285540132b21
+[    18.004] (II) RADEON(0): 	00001e8c0ad090204031200c40550013
+[    18.004] (II) RADEON(0): 	2b210000188c0ad08a20e02d10103e96
+[    18.004] (II) RADEON(0): 	00132b21000018000000000000000000
+[    18.004] (II) RADEON(0): 	00000000000000000000000000000000
+[    18.004] (II) RADEON(0): 	00000000000000000000000000000000
+[    18.004] (II) RADEON(0): 	00000000000000000000000000000021
+[    18.004] (II) RADEON(0): Not using mode "1920x1080" (vrefresh out of range)
+[    18.004] (II) RADEON(0): Not using mode "1280x720" (vrefresh out of range)
+[    18.004] (II) RADEON(0): Not using mode "720x576" (vrefresh out of range)
+[    18.004] (II) RADEON(0): Printing probed modes for output HDMI-0
+[    18.004] (II) RADEON(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    18.004] (II) RADEON(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1680x1050"x59.9  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1600x900"x60.0  108.00  1600 1624 1704 1800  900 901 904 1000 +hsync +vsync (60.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1440x900"x59.9   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1280x800"x59.9   71.00  1280 1328 1360 1440  800 803 809 823 +hsync -vsync (49.3 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.004] (II) RADEON(0): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[    18.004] (II) RADEON(0): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[    18.004] (II) RADEON(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    18.004] (II) RADEON(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.004] (II) RADEON(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[    18.004] (II) RADEON(0): Modeline "720x480"x60.0   27.03  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "720x480"x59.9   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    18.004] (II) RADEON(0): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    18.004] (II) RADEON(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.004] (II) RADEON(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    18.004] (II) RADEON(0): Output HDMI-0 connected
+[    18.004] (II) RADEON(0): Using exact sizes for initial modes
+[    18.004] (II) RADEON(0): Output HDMI-0 using initial mode 1920x1080 +0+0
+[    18.004] (II) RADEON(0): mem size init: gart size :3fdde000 vram size: s:40000000 visible:f4b4000
+[    18.004] (**) RADEON(0): Display dimensions: (531, 299) mm
+[    18.004] (**) RADEON(0): DPI set to (91, 91)
+[    18.004] (==) RADEON(0): Using gamma correction (1.0, 1.0, 1.0)
+[    18.004] (II) Loading sub module "ramdac"
+[    18.004] (II) LoadModule: "ramdac"
+[    18.004] (II) Module "ramdac" already built-in
+[    18.004] (**) RADEON(1): Depth 24, (--) framebuffer bpp 32
+[    18.004] (II) RADEON(1): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+[    18.004] (==) RADEON(1): Default visual is TrueColor
+[    18.004] (**) RADEON(1): Option "ZaphodHeads" "DisplayPort-0"
+[    18.004] (==) RADEON(1): RGB weight 888
+[    18.004] (II) RADEON(1): Using 8 bits per RGB (8 bit DAC)
+[    18.004] (--) RADEON(1): Chipset: "CAICOS" (ChipID = 0x6779)
+[    18.004] (II) RADEON(1):  reusing fd for second head
+[    18.004] (II) Loading sub module "fb"
+[    18.004] (II) LoadModule: "fb"
+[    18.004] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    18.004] (II) Module fb: vendor="X.Org Foundation"
+[    18.004] 	compiled for 1.20.3, module version = 1.0.0
+[    18.004] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    18.004] (II) Loading sub module "dri2"
+[    18.004] (II) LoadModule: "dri2"
+[    18.004] (II) Module "dri2" already built-in
+[    18.006] (II) Loading sub module "glamoregl"
+[    18.006] (II) LoadModule: "glamoregl"
+[    18.007] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    18.007] (II) Module glamoregl: vendor="X.Org Foundation"
+[    18.007] 	compiled for 1.20.3, module version = 1.0.1
+[    18.007] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    18.010] (II) RADEON(1): glamor X acceleration enabled on AMD CAICOS (DRM 2.50.0 / 4.20.7-arch1-1-ARCH, LLVM 7.0.1)
+[    18.010] (II) RADEON(1): glamor detected, initialising EGL layer.
+[    18.010] (II) RADEON(1): KMS Color Tiling: enabled
+[    18.010] (II) RADEON(1): KMS Color Tiling 2D: enabled
+[    18.010] (==) RADEON(1): TearFree property default: auto
+[    18.010] (II) RADEON(1): KMS Pageflipping: enabled
+[    18.052] (II) RADEON(1): Output DisplayPort-0 using monitor section small_block_1
+[    18.195] (II) RADEON(1): EDID for output DisplayPort-0
+[    18.195] (II) RADEON(1): Manufacturer: HSD  Model: 4c41  Serial#: 16843009
+[    18.195] (II) RADEON(1): Year: 2010  Week: 48
+[    18.195] (II) RADEON(1): EDID Version: 1.3
+[    18.195] (II) RADEON(1): Digital Display Input
+[    18.195] (II) RADEON(1): Max Image Size [cm]: horiz.: 38  vert.: 30
+[    18.195] (II) RADEON(1): Gamma: 2.20
+[    18.195] (II) RADEON(1): DPMS capabilities: StandBy Suspend Off
+[    18.195] (II) RADEON(1): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 
+[    18.195] (II) RADEON(1): First detailed timing is preferred mode
+[    18.195] (II) RADEON(1): redX: 0.643 redY: 0.336   greenX: 0.289 greenY: 0.605
+[    18.195] (II) RADEON(1): blueX: 0.146 blueY: 0.072   whiteX: 0.313 whiteY: 0.329
+[    18.195] (II) RADEON(1): Supported established timings:
+[    18.195] (II) RADEON(1): 720x400@70Hz
+[    18.195] (II) RADEON(1): 640x480@60Hz
+[    18.195] (II) RADEON(1): 640x480@67Hz
+[    18.195] (II) RADEON(1): 640x480@72Hz
+[    18.196] (II) RADEON(1): 640x480@75Hz
+[    18.196] (II) RADEON(1): 800x600@56Hz
+[    18.196] (II) RADEON(1): 800x600@60Hz
+[    18.196] (II) RADEON(1): 800x600@72Hz
+[    18.196] (II) RADEON(1): 800x600@75Hz
+[    18.196] (II) RADEON(1): 832x624@75Hz
+[    18.196] (II) RADEON(1): 1024x768@60Hz
+[    18.196] (II) RADEON(1): 1024x768@70Hz
+[    18.196] (II) RADEON(1): 1024x768@75Hz
+[    18.196] (II) RADEON(1): 1280x1024@75Hz
+[    18.196] (II) RADEON(1): 1152x864@75Hz
+[    18.196] (II) RADEON(1): Manufacturer's mask: 0
+[    18.196] (II) RADEON(1): Supported standard timings:
+[    18.196] (II) RADEON(1): #0: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    18.196] (II) RADEON(1): #1: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+[    18.196] (II) RADEON(1): #2: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    18.196] (II) RADEON(1): #3: hsize: 1152  vsize 864  refresh: 75  vid: 20337
+[    18.196] (II) RADEON(1): #4: hsize: 1024  vsize 768  refresh: 66  vid: 18017
+[    18.196] (II) RADEON(1): Supported detailed timing:
+[    18.196] (II) RADEON(1): clock: 108.0 MHz   Image Size:  376 x 301 mm
+[    18.196] (II) RADEON(1): h_active: 1280  h_sync: 1328  h_sync_end 1440 h_blank_end 1688 h_border: 0
+[    18.196] (II) RADEON(1): v_active: 1024  v_sync: 1025  v_sync_end 1028 v_blanking: 1066 v_border: 0
+[    18.196] (II) RADEON(1): Monitor name: Hanns.G HA191
+[    18.196] (II) RADEON(1): Ranges: V min: 56 V max: 75 Hz, H min: 24 H max: 80 kHz, PixClock max 175 MHz
+[    18.196] (II) RADEON(1): Serial No: 048WX3LY02996
+[    18.196] (II) RADEON(1): EDID (in hex):
+[    18.196] (II) RADEON(1): 	00ffffffffffff002264414c01010101
+[    18.196] (II) RADEON(1): 	3014010380261e78ea80a5a4564a9b25
+[    18.196] (II) RADEON(1): 	125054bfef808180814081c0714f6146
+[    18.196] (II) RADEON(1): 	010101010101302a009851002a403070
+[    18.196] (II) RADEON(1): 	1300782d1100001e000000fc0048616e
+[    18.196] (II) RADEON(1): 	6e732e47204841313931000000fd0038
+[    18.196] (II) RADEON(1): 	4b185011000a202020202020000000ff
+[    18.196] (II) RADEON(1): 	003034385758334c5930323939360034
+[    18.196] (II) RADEON(1): Printing probed modes for output DisplayPort-0
+[    18.196] (II) RADEON(1): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz eP)
+[    18.196] (II) RADEON(1): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[    18.196] (II) RADEON(1): Modeline "1024x768"x66.0   71.64  1024 1080 1192 1360  768 769 772 798 -hsync +vsync (52.7 kHz)
+[    18.196] (II) RADEON(1): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.196] (II) RADEON(1): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[    18.196] (II) RADEON(1): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[    18.196] (II) RADEON(1): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    18.196] (II) RADEON(1): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.196] (II) RADEON(1): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[    18.196] (II) RADEON(1): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    18.196] (II) RADEON(1): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    18.196] (II) RADEON(1): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    18.196] (II) RADEON(1): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.196] (II) RADEON(1): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    18.196] (II) RADEON(1): Output DisplayPort-0 connected
+[    18.196] (II) RADEON(1): Using exact sizes for initial modes
+[    18.196] (II) RADEON(1): Output DisplayPort-0 using initial mode 1280x1024 +0+0
+[    18.196] (II) RADEON(1): mem size init: gart size :3fdde000 vram size: s:40000000 visible:f4b4000
+[    18.196] (**) RADEON(1): Display dimensions: (376, 301) mm
+[    18.196] (**) RADEON(1): DPI set to (86, 86)
+[    18.196] (==) RADEON(1): Using gamma correction (1.0, 1.0, 1.0)
+[    18.196] (II) Loading sub module "ramdac"
+[    18.196] (II) LoadModule: "ramdac"
+[    18.196] (II) Module "ramdac" already built-in
+[    18.196] (**) RADEON(2): Depth 24, (--) framebuffer bpp 32
+[    18.196] (II) RADEON(2): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+[    18.196] (==) RADEON(2): Default visual is TrueColor
+[    18.196] (**) RADEON(2): Option "ZaphodHeads" "DVI-0"
+[    18.196] (==) RADEON(2): RGB weight 888
+[    18.196] (II) RADEON(2): Using 8 bits per RGB (8 bit DAC)
+[    18.196] (--) RADEON(2): Chipset: "CAICOS" (ChipID = 0x6779)
+[    18.196] (II) RADEON(2):  reusing fd for second head
+[    18.196] (II) Loading sub module "fb"
+[    18.196] (II) LoadModule: "fb"
+[    18.196] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    18.196] (II) Module fb: vendor="X.Org Foundation"
+[    18.196] 	compiled for 1.20.3, module version = 1.0.0
+[    18.196] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    18.196] (II) Loading sub module "dri2"
+[    18.196] (II) LoadModule: "dri2"
+[    18.196] (II) Module "dri2" already built-in
+[    18.198] (II) Loading sub module "glamoregl"
+[    18.198] (II) LoadModule: "glamoregl"
+[    18.198] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    18.198] (II) Module glamoregl: vendor="X.Org Foundation"
+[    18.198] 	compiled for 1.20.3, module version = 1.0.1
+[    18.198] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    18.201] (II) RADEON(2): glamor X acceleration enabled on AMD CAICOS (DRM 2.50.0 / 4.20.7-arch1-1-ARCH, LLVM 7.0.1)
+[    18.201] (II) RADEON(2): glamor detected, initialising EGL layer.
+[    18.201] (II) RADEON(2): KMS Color Tiling: enabled
+[    18.201] (II) RADEON(2): KMS Color Tiling 2D: enabled
+[    18.201] (==) RADEON(2): TearFree property default: auto
+[    18.201] (II) RADEON(2): KMS Pageflipping: enabled
+[    18.342] (II) RADEON(2): Output DVI-0 using monitor section small_block_2
+[    18.378] (II) RADEON(2): EDID for output DVI-0
+[    18.378] (II) RADEON(2): Manufacturer: HSD  Model: 4c41  Serial#: 16843009
+[    18.378] (II) RADEON(2): Year: 2012  Week: 20
+[    18.378] (II) RADEON(2): EDID Version: 1.3
+[    18.378] (II) RADEON(2): Analog Display Input,  Input Voltage Level: 0.700/0.300 V
+[    18.378] (II) RADEON(2): Sync:  Separate  SyncOnGreen
+[    18.378] (II) RADEON(2): Max Image Size [cm]: horiz.: 38  vert.: 30
+[    18.378] (II) RADEON(2): Gamma: 2.20
+[    18.378] (II) RADEON(2): DPMS capabilities: StandBy Suspend Off; RGB/Color Display
+[    18.378] (II) RADEON(2): First detailed timing is preferred mode
+[    18.378] (II) RADEON(2): redX: 0.643 redY: 0.336   greenX: 0.289 greenY: 0.605
+[    18.378] (II) RADEON(2): blueX: 0.146 blueY: 0.072   whiteX: 0.313 whiteY: 0.329
+[    18.378] (II) RADEON(2): Supported established timings:
+[    18.378] (II) RADEON(2): 720x400@70Hz
+[    18.378] (II) RADEON(2): 640x480@60Hz
+[    18.378] (II) RADEON(2): 640x480@67Hz
+[    18.378] (II) RADEON(2): 640x480@72Hz
+[    18.378] (II) RADEON(2): 640x480@75Hz
+[    18.378] (II) RADEON(2): 800x600@56Hz
+[    18.378] (II) RADEON(2): 800x600@60Hz
+[    18.378] (II) RADEON(2): 800x600@72Hz
+[    18.378] (II) RADEON(2): 800x600@75Hz
+[    18.378] (II) RADEON(2): 832x624@75Hz
+[    18.378] (II) RADEON(2): 1024x768@60Hz
+[    18.378] (II) RADEON(2): 1024x768@70Hz
+[    18.378] (II) RADEON(2): 1024x768@75Hz
+[    18.378] (II) RADEON(2): 1280x1024@75Hz
+[    18.378] (II) RADEON(2): 1152x864@75Hz
+[    18.378] (II) RADEON(2): Manufacturer's mask: 0
+[    18.378] (II) RADEON(2): Supported standard timings:
+[    18.378] (II) RADEON(2): #0: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    18.378] (II) RADEON(2): #1: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+[    18.378] (II) RADEON(2): #2: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    18.378] (II) RADEON(2): #3: hsize: 1152  vsize 864  refresh: 75  vid: 20337
+[    18.378] (II) RADEON(2): #4: hsize: 1024  vsize 768  refresh: 66  vid: 18017
+[    18.378] (II) RADEON(2): Supported detailed timing:
+[    18.378] (II) RADEON(2): clock: 108.0 MHz   Image Size:  376 x 301 mm
+[    18.378] (II) RADEON(2): h_active: 1280  h_sync: 1328  h_sync_end 1440 h_blank_end 1688 h_border: 0
+[    18.378] (II) RADEON(2): v_active: 1024  v_sync: 1025  v_sync_end 1028 v_blanking: 1066 v_border: 0
+[    18.378] (II) RADEON(2): Monitor name: Hanns.G HA191
+[    18.378] (II) RADEON(2): Ranges: V min: 56 V max: 75 Hz, H min: 24 H max: 80 kHz, PixClock max 175 MHz
+[    18.378] (II) RADEON(2): Serial No: 220WX3LY05704
+[    18.378] (II) RADEON(2): EDID (in hex):
+[    18.378] (II) RADEON(2): 	00ffffffffffff002264414c01010101
+[    18.378] (II) RADEON(2): 	141601030a261e78ea80a5a4564a9b25
+[    18.378] (II) RADEON(2): 	125054bfef808180814081c0714f6146
+[    18.378] (II) RADEON(2): 	010101010101302a009851002a403070
+[    18.378] (II) RADEON(2): 	1300782d1100001e000000fc0048616e
+[    18.378] (II) RADEON(2): 	6e732e47204841313931000000fd0038
+[    18.378] (II) RADEON(2): 	4b185011000a202020202020000000ff
+[    18.378] (II) RADEON(2): 	003232305758334c59303537303400d6
+[    18.378] (II) RADEON(2): Printing probed modes for output DVI-0
+[    18.378] (II) RADEON(2): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz eP)
+[    18.378] (II) RADEON(2): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[    18.378] (II) RADEON(2): Modeline "1024x768"x66.0   71.64  1024 1080 1192 1360  768 769 772 798 -hsync +vsync (52.7 kHz)
+[    18.378] (II) RADEON(2): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.378] (II) RADEON(2): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[    18.378] (II) RADEON(2): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[    18.378] (II) RADEON(2): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    18.378] (II) RADEON(2): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.378] (II) RADEON(2): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[    18.378] (II) RADEON(2): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    18.378] (II) RADEON(2): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    18.378] (II) RADEON(2): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    18.378] (II) RADEON(2): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.378] (II) RADEON(2): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    18.378] (II) RADEON(2): Output DVI-0 connected
+[    18.378] (II) RADEON(2): Using exact sizes for initial modes
+[    18.378] (II) RADEON(2): Output DVI-0 using initial mode 1280x1024 +0+0
+[    18.378] (II) RADEON(2): mem size init: gart size :3fdde000 vram size: s:40000000 visible:f4b4000
+[    18.378] (**) RADEON(2): Display dimensions: (376, 301) mm
+[    18.378] (**) RADEON(2): DPI set to (86, 86)
+[    18.378] (==) RADEON(2): Using gamma correction (1.0, 1.0, 1.0)
+[    18.378] (II) Loading sub module "ramdac"
+[    18.378] (II) LoadModule: "ramdac"
+[    18.378] (II) Module "ramdac" already built-in
+[    18.378] (II) RADEON(0): [DRI2] Setup complete
+[    18.378] (II) RADEON(0): [DRI2]   DRI driver: r600
+[    18.378] (II) RADEON(0): [DRI2]   VDPAU driver: r600
+[    18.378] (II) RADEON(0): Front buffer size: 8100K
+[    18.378] (II) RADEON(0): VRAM usage limit set to 218214K
+[    18.381] (II) RADEON(0): SYNC extension fences enabled
+[    18.381] (II) RADEON(0): Present extension enabled
+[    18.382] (==) RADEON(0): DRI3 enabled
+[    18.382] (==) RADEON(0): Backing store enabled
+[    18.382] (II) RADEON(0): Direct rendering enabled
+[    18.405] (II) RADEON(0): Use GLAMOR acceleration.
+[    18.405] (II) RADEON(0): Acceleration enabled
+[    18.405] (**) RADEON(0): DPMS enabled
+[    18.405] (==) RADEON(0): Silken mouse disabled
+[    18.405] (II) RADEON(0): Set up textured video (glamor)
+[    18.405] (II) RADEON(0): [XvMC] Associated with GLAMOR Textured Video.
+[    18.405] (II) RADEON(0): [XvMC] Extension initialized.
+[    18.406] (WW) RADEON(0): Option "PrefferedMode" is not used
+[    18.406] (WW) RADEON(0): Option "DMPS" is not used
+[    18.406] (WW) RADEON(0): Option "MultipleGPU" is not used
+[    18.406] (II) RADEON(1): [DRI2] Setup complete
+[    18.406] (II) RADEON(1): [DRI2]   DRI driver: r600
+[    18.406] (II) RADEON(1): [DRI2]   VDPAU driver: r600
+[    18.406] (II) RADEON(1): Front buffer size: 5120K
+[    18.406] (II) RADEON(1): VRAM usage limit set to 220896K
+[    18.406] (II) RADEON(1): SYNC extension fences enabled
+[    18.406] (II) RADEON(1): Present extension enabled
+[    18.406] (==) RADEON(1): DRI3 enabled
+[    18.406] (==) RADEON(1): Backing store enabled
+[    18.406] (II) RADEON(1): Direct rendering enabled
+[    18.420] (II) RADEON(1): Use GLAMOR acceleration.
+[    18.420] (II) RADEON(1): Acceleration enabled
+[    18.420] (**) RADEON(1): DPMS enabled
+[    18.420] (==) RADEON(1): Silken mouse disabled
+[    18.420] (II) RADEON(1): Set up textured video (glamor)
+[    18.420] (II) RADEON(1): [XvMC] Associated with GLAMOR Textured Video.
+[    18.420] (II) RADEON(1): [XvMC] Extension initialized.
+[    18.421] (WW) RADEON(1): Option "PrefferedMode" is not used
+[    18.421] (WW) RADEON(1): Option "DMPS" is not used
+[    18.421] (WW) RADEON(1): Option "MultipleGPU" is not used
+[    18.421] (II) RADEON(2): [DRI2] Setup complete
+[    18.421] (II) RADEON(2): [DRI2]   DRI driver: r600
+[    18.421] (II) RADEON(2): [DRI2]   VDPAU driver: r600
+[    18.421] (II) RADEON(2): Front buffer size: 5120K
+[    18.421] (II) RADEON(2): VRAM usage limit set to 220896K
+[    18.421] (II) RADEON(2): SYNC extension fences enabled
+[    18.421] (II) RADEON(2): Present extension enabled
+[    18.421] (==) RADEON(2): DRI3 enabled
+[    18.421] (==) RADEON(2): Backing store enabled
+[    18.421] (II) RADEON(2): Direct rendering enabled
+[    18.435] (II) RADEON(2): Use GLAMOR acceleration.
+[    18.435] (II) RADEON(2): Acceleration enabled
+[    18.435] (**) RADEON(2): DPMS enabled
+[    18.435] (==) RADEON(2): Silken mouse disabled
+[    18.435] (II) RADEON(2): Set up textured video (glamor)
+[    18.435] (II) RADEON(2): [XvMC] Associated with GLAMOR Textured Video.
+[    18.435] (II) RADEON(2): [XvMC] Extension initialized.
+[    18.435] (WW) RADEON(2): Option "PrefferedMode" is not used
+[    18.435] (WW) RADEON(2): Option "DMPS" is not used
+[    18.435] (WW) RADEON(2): Option "MultipleGPU" is not used
+[    18.435] (II) Initializing extension Generic Event Extension
+[    18.435] (II) Initializing extension SHAPE
+[    18.435] (II) Initializing extension MIT-SHM
+[    18.435] (II) Initializing extension XInputExtension
+[    18.435] (II) Initializing extension XTEST
+[    18.435] (II) Initializing extension BIG-REQUESTS
+[    18.435] (II) Initializing extension SYNC
+[    18.435] (II) Initializing extension XKEYBOARD
+[    18.435] (II) Initializing extension XC-MISC
+[    18.435] (II) Initializing extension SECURITY
+[    18.435] (II) Initializing extension XFIXES
+[    18.435] (II) Initializing extension RENDER
+[    18.435] (II) Initializing extension RANDR
+[    18.435] (II) Initializing extension COMPOSITE
+[    18.435] (II) Initializing extension DAMAGE
+[    18.435] (II) Initializing extension MIT-SCREEN-SAVER
+[    18.435] (II) Initializing extension DOUBLE-BUFFER
+[    18.435] (II) Initializing extension RECORD
+[    18.435] (II) Initializing extension DPMS
+[    18.435] (II) Initializing extension Present
+[    18.435] (II) Initializing extension DRI3
+[    18.435] (II) Initializing extension X-Resource
+[    18.435] (II) Initializing extension XVideo
+[    18.435] (II) Initializing extension XVideo-MotionCompensation
+[    18.435] (II) Initializing extension GLX
+[    18.438] (II) AIGLX: Loaded and initialized r600
+[    18.438] (II) GLX: Initialized DRI2 GL provider for screen 0
+[    18.441] (II) AIGLX: Loaded and initialized r600
+[    18.441] (II) GLX: Initialized DRI2 GL provider for screen 1
+[    18.444] (II) AIGLX: Loaded and initialized r600
+[    18.444] (II) GLX: Initialized DRI2 GL provider for screen 2
+[    18.444] (II) Initializing extension XFree86-VidModeExtension
+[    18.444] (II) Initializing extension XFree86-DGA
+[    18.444] (II) Initializing extension XFree86-DRI
+[    18.444] (II) Initializing extension DRI2
+[    18.444] (II) RADEON(0): Setting screen physical size to 531 x 299
+[    18.445] (II) RADEON(1): Setting screen physical size to 376 x 301
+[    18.445] (II) RADEON(2): Setting screen physical size to 376 x 301
+[    18.534] (II) config/udev: Adding input device Power Button (/dev/input/event1)
+[    18.534] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    18.534] (II) LoadModule: "libinput"
+[    18.534] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    18.540] (II) Module libinput: vendor="X.Org Foundation"
+[    18.540] 	compiled for 1.20.3, module version = 0.28.2
+[    18.540] 	Module class: X.Org XInput Driver
+[    18.540] 	ABI class: X.Org XInput driver, version 24.1
+[    18.540] (II) Using input driver 'libinput' for 'Power Button'
+[    18.541] (II) systemd-logind: got fd for /dev/input/event1 13:65 fd 35 paused 0
+[    18.541] (**) Power Button: always reports core events
+[    18.541] (**) Option "Device" "/dev/input/event1"
+[    18.541] (**) Option "_source" "server/udev"
+[    18.543] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[    18.543] (II) event1  - Power Button: device is a keyboard
+[    18.543] (II) event1  - Power Button: device removed
+[    18.543] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+[    18.543] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[    18.544] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[    18.544] (II) event1  - Power Button: device is a keyboard
+[    18.544] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[    18.544] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    18.544] (II) Using input driver 'libinput' for 'Power Button'
+[    18.544] (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 38 paused 0
+[    18.544] (**) Power Button: always reports core events
+[    18.544] (**) Option "Device" "/dev/input/event0"
+[    18.544] (**) Option "_source" "server/udev"
+[    18.545] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    18.545] (II) event0  - Power Button: device is a keyboard
+[    18.545] (II) event0  - Power Button: device removed
+[    18.545] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+[    18.545] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+[    18.545] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    18.545] (II) event0  - Power Button: device is a keyboard
+[    18.546] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=3 (/dev/input/event5)
+[    18.546] (II) No input driver specified, ignoring this device.
+[    18.546] (II) This device may have been added with another device file.
+[    18.546] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=3 (/dev/input/event13)
+[    18.546] (II) No input driver specified, ignoring this device.
+[    18.546] (II) This device may have been added with another device file.
+[    18.546] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=7 (/dev/input/event14)
+[    18.546] (II) No input driver specified, ignoring this device.
+[    18.546] (II) This device may have been added with another device file.
+[    18.546] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=8 (/dev/input/event15)
+[    18.546] (II) No input driver specified, ignoring this device.
+[    18.546] (II) This device may have been added with another device file.
+[    18.546] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=9 (/dev/input/event16)
+[    18.546] (II) No input driver specified, ignoring this device.
+[    18.546] (II) This device may have been added with another device file.
+[    18.547] (II) config/udev: Adding input device PixArt Microsoft USB Optical Mouse (/dev/input/event3)
+[    18.547] (**) PixArt Microsoft USB Optical Mouse: Applying InputClass "libinput pointer catchall"
+[    18.547] (II) Using input driver 'libinput' for 'PixArt Microsoft USB Optical Mouse'
+[    18.547] (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 39 paused 0
+[    18.547] (**) PixArt Microsoft USB Optical Mouse: always reports core events
+[    18.547] (**) Option "Device" "/dev/input/event3"
+[    18.547] (**) Option "_source" "server/udev"
+[    18.548] (II) event3  - PixArt Microsoft USB Optical Mouse: is tagged by udev as: Mouse
+[    18.548] (II) event3  - PixArt Microsoft USB Optical Mouse: device is a pointer
+[    18.548] (II) event3  - PixArt Microsoft USB Optical Mouse: device removed
+[    18.548] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:07.1/0000:0a:00.3/usb5/5-1/5-1:1.0/0003:045E:00CB.0001/input/input3/event3"
+[    18.548] (II) XINPUT: Adding extended input device "PixArt Microsoft USB Optical Mouse" (type: MOUSE, id 8)
+[    18.548] (**) Option "AccelerationScheme" "none"
+[    18.548] (**) PixArt Microsoft USB Optical Mouse: (accel) selected scheme none/0
+[    18.548] (**) PixArt Microsoft USB Optical Mouse: (accel) acceleration factor: 2.000
+[    18.548] (**) PixArt Microsoft USB Optical Mouse: (accel) acceleration threshold: 4
+[    18.549] (II) event3  - PixArt Microsoft USB Optical Mouse: is tagged by udev as: Mouse
+[    18.549] (II) event3  - PixArt Microsoft USB Optical Mouse: device is a pointer
+[    18.549] (II) config/udev: Adding input device PixArt Microsoft USB Optical Mouse (/dev/input/mouse0)
+[    18.549] (II) No input driver specified, ignoring this device.
+[    18.549] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Line Out Surround (/dev/input/event10)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Line Out CLFE (/dev/input/event11)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Front Headphone (/dev/input/event12)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Front Mic (/dev/input/event6)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Rear Mic (/dev/input/event7)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.550] (II) config/udev: Adding input device HD-Audio Generic Line (/dev/input/event8)
+[    18.550] (II) No input driver specified, ignoring this device.
+[    18.550] (II) This device may have been added with another device file.
+[    18.551] (II) config/udev: Adding input device HD-Audio Generic Line Out Front (/dev/input/event9)
+[    18.551] (II) No input driver specified, ignoring this device.
+[    18.551] (II) This device may have been added with another device file.
+[    18.551] (II) config/udev: Adding input device Eee PC WMI hotkeys (/dev/input/event4)
+[    18.551] (**) Eee PC WMI hotkeys: Applying InputClass "libinput keyboard catchall"
+[    18.551] (II) Using input driver 'libinput' for 'Eee PC WMI hotkeys'
+[    18.551] (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 40 paused 0
+[    18.551] (**) Eee PC WMI hotkeys: always reports core events
+[    18.551] (**) Option "Device" "/dev/input/event4"
+[    18.551] (**) Option "_source" "server/udev"
+[    18.552] (II) event4  - Eee PC WMI hotkeys: is tagged by udev as: Keyboard
+[    18.552] (II) event4  - Eee PC WMI hotkeys: device is a keyboard
+[    18.552] (II) event4  - Eee PC WMI hotkeys: device removed
+[    18.552] (**) Option "config_info" "udev:/sys/devices/platform/eeepc-wmi/input/input4/event4"
+[    18.552] (II) XINPUT: Adding extended input device "Eee PC WMI hotkeys" (type: KEYBOARD, id 9)
+[    18.552] (II) event4  - Eee PC WMI hotkeys: is tagged by udev as: Keyboard
+[    18.552] (II) event4  - Eee PC WMI hotkeys: device is a keyboard
+[    18.553] (II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event2)
+[    18.553] (**) AT Translated Set 2 keyboard: Applying InputClass "libinput keyboard catchall"
+[    18.553] (II) Using input driver 'libinput' for 'AT Translated Set 2 keyboard'
+[    18.553] (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 41 paused 0
+[    18.553] (**) AT Translated Set 2 keyboard: always reports core events
+[    18.553] (**) Option "Device" "/dev/input/event2"
+[    18.553] (**) Option "_source" "server/udev"
+[    18.554] (II) event2  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
+[    18.554] (II) event2  - AT Translated Set 2 keyboard: device is a keyboard
+[    18.554] (II) event2  - AT Translated Set 2 keyboard: device removed
+[    18.554] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input2/event2"
+[    18.554] (II) XINPUT: Adding extended input device "AT Translated Set 2 keyboard" (type: KEYBOARD, id 10)
+[    18.554] (II) event2  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
+[    18.554] (II) event2  - AT Translated Set 2 keyboard: device is a keyboard
