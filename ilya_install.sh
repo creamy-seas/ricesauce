@@ -2,6 +2,8 @@
 cd config
 cp -fv .Xresources ~/
 cp -fv remaps ~/.scripts/tools/
+# 1b - copy bash profile
+cat .profile >> ~/.profile
 
 # 2 - create hard links to scripts (so that if they change, they also update in this folder)
 cd ../scripts
