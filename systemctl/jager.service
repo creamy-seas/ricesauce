@@ -6,7 +6,7 @@ Requires=sshd.service
 [Service]
 TimeoutStartSec=7
 Type=forking
-ExecStart=~/.ilya_scripts/jager.sh
+ExecStart=/home/antonov/.ilya_scripts/jager.sh
 
 [Install]
 WantedBy=multi-user.target
