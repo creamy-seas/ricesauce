@@ -18,7 +18,7 @@ done
 #3) open up connections if they are closed
 if [ "$macmini" = false ]; then
     echo '===> connecting to macmini';
-    sudo ssh -f -N -R 2410:localhost:22 ilyaantonov@86.20.96.166 -p 22;
+    sudo ssh -f -N -R 2410:localhost:22 CCCP@86.20.96.166 -p 22;
 fi
 echo "===> finished";
 
