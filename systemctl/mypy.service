@@ -1,0 +1,10 @@
+[Unit]
+Description=My python service
+
+[Service]
+TimeoutSec=infinity
+Type=forking
+ExecStart=/home/antonov/.ilya_scripts/mypy.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -10,15 +10,16 @@ echo "===> looking at all the alive connections";
 for i in $connectionDestinations
 do
     if [ "$i" = "166:22" ]; then
-	echo '===> \"macmini\" is connected'
+	echo '===> \"mac\" is connected'
 	macmini=true
     fi
 done
 
 #3) open up connections if they are closed
 if [ "$macmini" = false ]; then
-    echo '===> connecting to macmini';
+    echo '===> connecting to mac';
     sudo ssh -f -N -R 2410:localhost:22 CCCP@86.20.96.166 -p 22;
 fi
 echo "===> finished";
 
+echo "===> annealing";
