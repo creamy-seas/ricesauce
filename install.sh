@@ -1,13 +1,22 @@
-echo "==> Syncing files from ricing folder"jjjkk
-
+HOME_FOLDER="/root"
 # 1 - copy configuration files, some as hard links
-echo "  > COPYING configuration files"
+echo " ==> Copying configuration files"
 cd config
-cp -fv .Xresources ~/
-cp -fv remaps ~/.scripts/tools/
-# 1b - copy bash profile
-cat .profile >> ~/.profile
+mkdir -p "$HOME_FOLDER/.config/hardware"
+cp -fv .Xresources "$HOME_FOLDER/.config/hardware"
+cp -fv remaps "$HOME_FOLDER/.config/hardware"
+cp -fv .profile ~/.profile
+
+echo "==> Sourcing the profile"
 source ~/.profile
+
+echo "==> Setting keyboard config"
+PERSONAL_MAP="/usr/local/share/kbd/keymap"
+mkdir -p "$PERSONAL_MAP"
+cp personal.map "$PERSONAL_MAP"
+loadkeys "$PERSONAL_MAP/personal.map"
+echo "KEYMAP=uk" > /etc/vconsole.conf
+echo "KEYMAP=$PERSONAL_MAP/personal.map" >> /etc/vconsole.conf
 
 # 2 - create hard links to scripts (so that if they change, they also update in this folder)
 #echo "  > LINKING scripts to .ilya_scripts directory"

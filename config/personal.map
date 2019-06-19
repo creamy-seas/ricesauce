@@ -1,0 +1,5 @@
+# 1 - use both alt keys
+include "linux-with-two-alt-keys"
+
+# 2 - map caps lock to control
+keycode 58 = Control
