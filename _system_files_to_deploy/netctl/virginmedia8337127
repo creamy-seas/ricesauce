@@ -1,5 +1,5 @@
 Description='A simple WPA encrypted wireless connection'
-Interface=wls1
+Interface=test
 Connection=wireless
 
 Security=wpa
