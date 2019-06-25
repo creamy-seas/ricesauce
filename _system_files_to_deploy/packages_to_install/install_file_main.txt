@@ -2,3 +2,6 @@ base-devel
 git
 archlinux-keyring
 ranger
+i3-gaps
+xorg-server
+xorg-xinit
