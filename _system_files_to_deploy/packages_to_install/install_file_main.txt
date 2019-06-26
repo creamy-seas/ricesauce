@@ -5,3 +5,4 @@ ranger
 i3-gaps
 xorg-server
 xorg-xinit
+fish
