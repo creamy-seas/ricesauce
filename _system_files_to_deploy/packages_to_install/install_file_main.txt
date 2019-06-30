@@ -3,6 +3,9 @@ git
 archlinux-keyring
 ranger
 i3-gaps
+i3-status
 xorg-server
 xorg-xinit
 fish
+ttf-inconsolata
+dmenu
