@@ -1,0 +1,93 @@
+# Use one of the supported image preview protocols
+set preview_images true
+set preview_images_method iterm2
+set iterm2_font_width 8
+set iterm2_font_height 11
+
+# How many directory-changes or console-commands should be kept in history?
+set max_history_size 100
+set max_console_history_size 100
+
+# Avoid previewing files larger than this size, in bytes.  Use a value of 0 to
+# disable this feature. 
+set preview_max_size 2000000
+
+# ===================================================================
+# == Local Options
+# ===================================================================
+# You can set local options that only affect a single directory.
+
+# Examples:
+# setlocal path=~/downloads sort mtime
+setlocal path=~/creamy_seas/boomer/linux sort mtime
+setlocal path=~/creamy_seas/boomer/varg sort random
+
+
+# ===================================================================
+# == Define keys for the browser
+# ===================================================================
+#gnuclownworld
+map gD cd /Users/CCCP/creamy_seas/2am/google_drive/days_work
+map gn cd /Users/CCCP/creamy_seas/2am/documentation/natural_language
+map gl cd /Users/CCCP/creamy_seas/learntokode
+map gq cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/qubit_simulations
+map gf cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/fabrication/autocad_files
+map gy cd /Users/CCCP/creamy_seas/2am/adv8_autoencoder/_LUCA
+map gx cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/xmon
+map ga cd ~/creamy_seas/monday_starts_on_saturday/all_the_notes
+map gdr cd ~/creamy_seas/monday_starts_on_saturday/dipole/report
+map gdp cd ~/creamy_seas/monday_starts_on_saturday/dipole/python
+map gpm cd ~/creamy_seas/monday_starts_on_saturday/generic_matlab
+map gpp cd ~/creamy_seas/monday_starts_on_saturday/generic_python
+map gj cd ~/creamy_seas/jailbait
+map gi cd ~/creamy_seas/gallery_road
+map gc cd ~/.config
+map gvl cd ~/creamy_seas/boomer/linux
+map gve cd ~/creamy_seas/boomer/emacs
+map gvp cd /Users/CCCP/creamy_seas/boomer/geometrical_physics
+map gvv cd /Users/CCCP/creamy_seas/boomer/varg
+map gr cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/read_read
+map gs cd ~/creamy_seas/syncFiles
+map gh cd ~
+map gm cd ~/creamy_seas/monday_starts_on_saturday
+map g2 cd ~/creamy_seas/2am
+map gb cd ~/Dropbox
+map gR eval fm.cd(ranger.RANGERDIR)
+map g/ cd /
+
+# Other commands
+# escape % with %%
+# %f - file, %d - directory, %s - selected files, %t tagged files in directory, %c - copied files, %space-space to avoid trailing spaces
+map mkd console mkdir%space
+map cW bulkrename %s
+map Mt shell magick %f -trim %f
+map M1 shell magick %f -scale 100 %f
+map M2 shell magick %f -scale 200 %f
+map M3 shell magick %f -scale 300 %f
+map M4 shell magick %f -scale 400 %f
+map M5 shell magick %f -scale 500 %f
+map M6 shell magick %f -scale 600 %f
+map M7 shell magick %f -scale 700 %f
+map M8 shell magick %f -scale 800 %f
+map M9 shell magick %f -scale 900 %f
+map M0 shell magick %f -scale 1000 %f
+map Mc shell magick %f -fuzz 5%% -transparent white %f
+# Bookmarks
+map `<any>  enter_bookmark %any
+map '<any>  enter_bookmark %any
+map m<any>  set_bookmark %any
+map um<any> unset_bookmark %any
+
+map m<bg>   draw_bookmarks
+copymap m<bg>  um<bg> `<bg> '<bg>
+
+# And of course the emacs way
+copycmap <ESC>       <C-g>
+copycmap <up>        <C-p>
+copycmap <down>      <C-n>
+copycmap <left>      <C-b>
+copycmap <right>     <C-f>
+copycmap <home>      <C-a>
+copycmap <end>       <C-e>
+copycmap <delete>    <C-d>
+copycmap <backspace> <C-h>
