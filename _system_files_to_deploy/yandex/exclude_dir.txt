@@ -3,9 +3,7 @@ _cashin
 audiobook
 auto
 bloat
-boomer
 camera_uploads
-gallery_road
 games_mania
 golden_road
 jailbait

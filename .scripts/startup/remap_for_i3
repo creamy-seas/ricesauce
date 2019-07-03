@@ -12,7 +12,7 @@
 # This script is called by i3 on startup.
 
 #1) set the layout
-#setxkbmap -layout gb
+setxkbmap -layout us
 
 #2) Increase key speed via a rate change
 #xset r rate 300 50
@@ -30,3 +30,6 @@ xmodmap -e "add control = Control_L"
 #e) reassign the right AltGr to the Meta key (mod1)
 xmodmap -e "remove mod5 = ISO_Level3_Shift"
 xmodmap -e "add mod1 = ISO_Level3_Shift"
+
+# 6 - remap the menu key to the windows key
+#xmodmap -e "keycode 34 = Win"

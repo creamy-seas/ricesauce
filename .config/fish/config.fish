@@ -4,6 +4,9 @@ bass source ~/.profile
 
 #test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
+abbr pacman "sudo pacman"
+abbr xc "xcowsay"
+abbr emacs "exec emacs"
 abbr yt "youtube-dl -f 135+140 -o \"%(title)s.%(ext)s\""
 abbr yt134 "youtube-dl -f 134+140 -o \"%(title)s.%(ext)s\""
 abbr ytmusic "youtube-dl --embed-thumbnail -f "bestaudio" --extract-audio --audio-format "mp3" -o     \"%(title)s.%(ext)s\""

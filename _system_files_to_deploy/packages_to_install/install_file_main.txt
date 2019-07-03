@@ -4,9 +4,14 @@ archlinux-keyring
 ranger
 i3-gaps
 i3status
+i3blocks
 xorg-server
 xorg-xinit
 fish
 ttf-inconsolata
 dmenu
 vim
+feh
+tmux
+wget
+unclutter
