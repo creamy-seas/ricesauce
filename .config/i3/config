@@ -144,8 +144,59 @@ bindsym $mod+F5			exec --no-startup-id $netrefresh
 ########################################
 # 13 - letter keybindings
 ########################################
+#bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
+#bindsym $mod+Shift+a		exec $term -e pulsemixer
+
+bindsym $mod+b			bar mode toggle
+bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id bottomleft
+
+# reload the configuration file
+bindsym $mod+Shift+c			reload
+
+# start dmenu (a program launcher)
+bindsym $mod+d			exec --no-startup-id dmenu_run
+bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
+
 bindsym $mod+e			exec --no-startup-id emacs
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+h			focus left
+bindsym $mod+Shift+h		move left 30
+
+bindsym $mod+i 			exec $term -e htop
+bindsym $mod+Shift+i		exec --no-startup-id i3resize up
+
+bindsym $mod+j			focus down
+bindsym $mod+Shift+j		move down 30
+
+bindsym $mod+k			focus up
+bindsym $mod+Shift+k		move up 30
+
+bindsym $mod+l			focus right
+bindsym $mod+Shift+l		move right 30
+
+bindsym $mod+o			sticky toggle
+bindsym $mod+Shift+o		exec --no-startup-id i3resize right
+
+#bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+Shift+u		exec --no-startup-id i3resize down
+
+#bindsym $mod+y			exec $term -e calcurse
+bindsym $mod+Shift+y		exec --no-startup-id i3resize left
+
+#bindsym $mod+m 			exec --no-startup-id $term -e ncmpcpp
+#bindsym $mod+Shift+m		exec --no-startup-id lmc mute
+
+#bindsym $mod+n			exec $term -e newsboat && pkill -RTMIN+6 i3blocks
+bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id bottomright
+
+#bindsym $mod+p			exec --no-startup-id lmc toggle
+#bindsym $mod+Shift+p		exec --no-startup-id lmc pause
+
+# bindsym $mod+q
+bindsym $mod+Shift+q kill
 
 bindsym $mod+r 			exec $term -e ranger
 bindsym $mod+Shift+r restart
@@ -156,8 +207,8 @@ bindsym $mod+Shift+s		gaps inner current minus 5
 bindsym $mod+t			layout toggle tabbed stacking splitv splith
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
 
-# bindsym $mod+q
-bindsym $mod+Shift+q kill
+#bindsym $mod+v
+#bindsym $mod+Shift+v
 
 bindsym $mod+w			exec xcowsay "loading browser"; exec --no-startup-id $BROWSER
 #bindsym $mod+Shift+w
@@ -174,41 +225,27 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-
-
-bindsym $mod+h			focus left
-bindsym $mod+Shift+h		move left 30
-
-bindsym $mod+j			focus down
-bindsym $mod+Shift+j		move down 30
-
-bindsym $mod+k			focus up
-bindsym $mod+Shift+k		move up 30
-
-bindsym $mod+l			focus right
-bindsym $mod+Shift+l		move right 30
-
-
-
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+########################################
+# 15 - workspace movement
+########################################
+bindsym $mod+Home		workspace $ws1
+bindsym $mod+Shift+Home		move container to workspace $ws1
+bindsym $mod+End		workspace $ws10
+bindsym $mod+Shift+End		move container to workspace $ws10
+bindsym $mod+Prior		workspace prev
+bindsym $mod+Shift+Prior	move container to workspace prev
+bindsym $mod+Next		workspace next
+bindsym $mod+Shift+Next		move container to workspace next
+bindsym $mod+Tab		workspace back_and_forth
+bindsym $mod+XF86Back		workspace prev
+bindsym $mod+Shift+XF86Back	move container to workspace prev
+bindsym $mod+XF86Forward	workspace next
+bindsym $mod+Shift+XF86Forward	move container to workspace next
+bindsym $mod+semicolon		workspace next
+#bindsym $mod+apostrophe		split horizontal ;; exec $term
+#bindsym $mod+backslash		split vertical ;; exec $term
+bindsym $mod+Shift+slash	kill
+bindsym $mod+slash		kill
 
 # switch to workspace
 set $ws1 "1"
@@ -243,13 +280,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
-# reload the configuration file
-bindsym $mod+Shift+c			reload
-
-
-
-
 
 ########################################
 # Useful to build on top of later on

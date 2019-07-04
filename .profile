@@ -6,3 +6,6 @@ export EDITOR="emacs"
 export BROWSER="firefox"
 export PATH="$(du $HOME/.scripts | awk '{print $2}' | tr "\n" ":")$PATH"
 export TERMINAL="st"
+
+# Start graphical server if i3 not already running.
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
