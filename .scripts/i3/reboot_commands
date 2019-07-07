@@ -10,7 +10,7 @@
 # preocesses the reboot, shutdown and refresh i3 commands
 
 
-CHOICE=$(echo -e "i3-Restart\ni3-Reload Config\ni3-Exit\nReboot\nShutdown" | \
+CHOICE=$(echo -e "i3-Reload Config\ni3-Restart\ni3-Exit\nReboot\nShutdown" | \
 	     dmenu -i -p "What do: ")
 
 if [[ $CHOICE == "i3-Restart" ]]; then

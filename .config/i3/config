@@ -20,8 +20,9 @@ exec --no-startup-id feh --bg-scale ~/.config/wall.png
 # c - hides the mouse after a while
 exec --no-startup-id unclutter
 
-# d - start dunst
+# d - start dunst, term
 exec --no-startup-id dunst
+exec $term
 
 # Run the script to update the mpd i3block on change.
 #exec_always --no-startup-id mpdupdate
@@ -29,50 +30,6 @@ exec --no-startup-id dunst
 #exec --no-startup-id mpd
 # Podboat automatic queue and download
 #exec_always --no-startup-id podentr
-
-########################################
-# 3 - set width of borders and gaps of al windows
-########################################
-for_window [class="^.*"] border pixel 2
-gaps inner 15
-gaps outer 15
-
-#for_window [class="Pinentry"] sticky enable
-
-#for_window [class="sent"] border pixel 0px
-#for_window [class="Blender"] move to workspace $ws6
-#for_window [class="marble"] move to workspace $ws7
-#for_window [title="GIMP Startup"] move workspace $ws5
-#for_window [class="Gimp"] move workspace $ws5
-#for_window [window_role="GtkFileChooserDialog"] resize shrink height 10 px
-#for_window [title="Default - Wine desktop"] floating enable
-
-# Bindings to make the webcam float and stick.
-#for_window [title="mpvfloat"] floating enable
-#for_window [title="mpvfloat"] sticky enable
-#for_window [title="mpvfloat"] border pixel 0
-#no_focus [title="mpvfloat"]
-
-########################################
-# 6 - tmux (appart from window splitting) keeps programs running.
-# it can have multiple windows (like iTerm2) and thus handle multiple programs
-########################################
-# a - the scratchpad is not visible, until you do "show scratchpad"
-for_window [instance="tmuxdd"] move scratchpad
-# b- keeps the tmux window open on all workspaces
-for_window [instance="tmuxdd"] sticky enable
-for_window [instance="tmuxdd"] floating enable
-for_window [instance="tmuxdd"] resize set 625 450
-for_window [instance="tmuxdd"] border pixel 3
-
-########################################
-# 7 - calculator
-########################################
-for_window [instance="dropdowncalc"] floating enable
-for_window [instance="dropdowncalc"] resize set 800 300
-for_window [instance="dropdowncalc"] move scratchpad
-for_window [instance="dropdowncalc"] border pixel 2
-for_window [instance="dropdowncalc"] sticky enable
 
 ########################################
 # 8 - set fonts
@@ -172,7 +129,7 @@ bindsym $mod+b			bar mode toggle
 bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id bottomleft
 
 #bindise $mod+c			split toggle
-bindsym $mod+Shift+c		reload
+bindsym $mod+Shift+c		exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
 
 # start dmenu (a program launcher)
 bindsym $mod+d			exec --no-startup-id dmenu_run
@@ -247,9 +204,15 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 floating_modifier $mod
 
 ########################################
-# 15 - other keys
+# 15 - other keys on x200
 ########################################
-bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
+bindsym XF86AudioMute			exec --no-startup-id lmc mute
+bindsym XF86AudioLowerVolume		exec --no-startup-id lmc down 5
+bindsym Shift+XF86AudioLowerVolume	exec --no-startup-id lmc down 10
+bindsym Control+XF86AudioLowerVolume	exec --no-startup-id lmc down 1
+bindsym XF86AudioRaiseVolume		exec --no-startup-id lmc up 5
+bindsym Shift+XF86AudioRaiseVolume	exec --no-startup-id lmc up 10
+bindsym Control+XF86AudioRaiseVolume	exec --no-startup-id lmc up 1
 
 ########################################
 # 15 - workspace movement
@@ -275,8 +238,8 @@ bindsym $mod+slash		kill
 
 # switch to workspace
 set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
+set $ws2 "2:&#xf269;"
+set $ws3 "3:&#xf17c;"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -306,6 +269,57 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+########################################
+# 3 - set width of borders and gaps of al windows
+# to check the class/instance of window run "determine_i3_class"
+########################################
+for_window [class="^.*"] border pixel 2		# remove titlebars
+gaps inner 15					
+gaps outer 15
+
+assign [class="Firefox"] $ws2
+for_window [class="Firefox"] workspace $ws2, gaps outer current set 0, gaps inner current set 0
+
+assign [class="Emacs"] $ws3
+for_window [class="Emacs"] workspace $ws3, gaps outter current set 0, gaps intter current set 0, fullscreen enable
+
+#for_window [class="Pinentry"] sticky enable
+#for_window [class="sent"] border pixel 0px
+#for_window [class="Blender"] move to workspace $ws6
+#for_window [class="marble"] move to workspace $ws7
+#for_window [title="GIMP Startup"] move workspace $ws5
+#for_window [class="Gimp"] move workspace $ws5
+#for_window [window_role="GtkFileChooserDialog"] resize shrink height 10 px
+#for_window [title="Default - Wine desktop"] floating enable
+
+# Bindings to make the webcam float and stick.
+#for_window [title="mpvfloat"] floating enable
+#for_window [title="mpvfloat"] sticky enable
+#for_window [title="mpvfloat"] border pixel 0
+#no_focus [title="mpvfloat"]
+
+########################################
+# 6 - tmux (appart from window splitting) keeps programs running.
+# it can have multiple windows (like iTerm2) and thus handle multiple programs
+########################################
+# a - the scratchpad is not visible, until you do "show scratchpad"
+#for_window [instance="tmuxdd"] move scratchpad
+# b- keeps the tmux window open on all workspaces
+#for_window [instance="tmuxdd"] sticky enable
+#for_window [instance="tmuxdd"] floating enable
+#for_window [instance="tmuxdd"] resize set 625 450
+#for_window [instance="tmuxdd"] border pixel 3
+
+########################################
+# 7 - dropdown menus. these are generated by the ddspawn command
+# e.g. ddspawn dropdowncalc
+########################################
+for_window [instance="dropdowncalc"] floating enable
+for_window [instance="dropdowncalc"] resize set 800 300
+for_window [instance="dropdowncalc"] move scratchpad
+for_window [instance="dropdowncalc"] border pixel 2
+for_window [instance="dropdowncalc"] sticky enable
 
 ########################################
 # Useful to build on top of later on

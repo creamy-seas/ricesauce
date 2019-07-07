@@ -1,5 +1,5 @@
 Tags,Package Name,Description
-,alsa-util,sound
+,alsa-utils,sound
 ,base-devel,standard selection of packages
 ,dmenu,quick launching of commands
 ,dunst,textbox that hovers and shows information send by "notify_send"
@@ -13,10 +13,13 @@ Tags,Package Name,Description
 ,i3lock,lock screen in i3
 ,imagemagick,image editing
 ,libnotify,provides the "notify-send" command
+,pulseaudio,audio server
+,pulsemixer,way to issue commands
 ,ranger,file browser
 ,scrot,take screenshots
 ,sxiv,image viewier
 ,tmux,terminal that can spawn multiple processes (like iTerm2)
+,ttf-font-awesome,font with firefox icon and other icons as well
 ,ttf-inconsolata,monoscape font
 ,ttf-linux-libertine,sans font
 ,unclutter,remove cursor from screen
@@ -26,6 +29,8 @@ Tags,Package Name,Description
 ,xclip,accesses the copied elemets
 ,xorg-server,graphical server
 ,xorg-xinit,command to start graphical server
+,xorg-xprop,command to determine class window comes from
+,xorg-xwininfo,used to get determine title, class of a window
 ,youtube-dl,download from youtube
 ,zathura,pdf viewer
 ,zathura-pdf-poppler,pdf viewer backend
