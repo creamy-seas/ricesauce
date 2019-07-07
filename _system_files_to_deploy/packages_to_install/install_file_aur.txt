@@ -1,5 +1,0 @@
-yandex-disk
-xcowsay
-screenkey
-ttf-tahoma
-ttf-emojione

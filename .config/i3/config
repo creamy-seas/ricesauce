@@ -13,10 +13,15 @@ set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager && xcow
 ########################################
 # a - remaps ctrl keys and sets
 exec --no-startup-id remap_for_i3
+
 # b - set the background
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
+
 # c - hides the mouse after a while
 exec --no-startup-id unclutter
+
+# d - start dunst
+exec --no-startup-id dunst
 
 # Run the script to update the mpd i3block on change.
 #exec_always --no-startup-id mpdupdate
@@ -31,6 +36,22 @@ exec --no-startup-id unclutter
 for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
+
+#for_window [class="Pinentry"] sticky enable
+
+#for_window [class="sent"] border pixel 0px
+#for_window [class="Blender"] move to workspace $ws6
+#for_window [class="marble"] move to workspace $ws7
+#for_window [title="GIMP Startup"] move workspace $ws5
+#for_window [class="Gimp"] move workspace $ws5
+#for_window [window_role="GtkFileChooserDialog"] resize shrink height 10 px
+#for_window [title="Default - Wine desktop"] floating enable
+
+# Bindings to make the webcam float and stick.
+#for_window [title="mpvfloat"] floating enable
+#for_window [title="mpvfloat"] sticky enable
+#for_window [title="mpvfloat"] border pixel 0
+#no_focus [title="mpvfloat"]
 
 ########################################
 # 6 - tmux (appart from window splitting) keeps programs running.
@@ -126,14 +147,14 @@ bindsym $mod+Return		exec $term
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+Escape		workspace prev
-bindsym $mod+Shift+Escape 	exec --no-startup-id prompt "Exit i3?" "i3-msg exit"
+#bindsym $mod+Escape		workspace prev
+#bindsym $mod+Shift+Escape 	exec --no-startup-id prompt "Exit i3?" "i3-msg exit"
 
 # bindsym $mod+BackSpace
 bindsym $mod+Shift+BackSpace	exec --no-startup-id prompt "Reboot computer?" "$reboot"
 
 # porno mode:
-bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-id lmc pause ; exec --no-startup-id pauseallmpv; workspace 0; exec $term -e htop ; exec $term -e ranger
+#bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-id lmc pause ; exec --no-startup-id pauseallmpv; workspace 0; exec $term -e htop ; exec $term -e ranger
 
 # Show selection:
 bindsym $mod+Insert		exec --no-startup-id showclip
@@ -150,8 +171,6 @@ bindsym $mod+F5			exec --no-startup-id $netrefresh
 bindsym $mod+b			bar mode toggle
 bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id bottomleft
 
-# reload the configuration file
-
 #bindise $mod+c			split toggle
 bindsym $mod+Shift+c		reload
 
@@ -160,7 +179,7 @@ bindsym $mod+d			exec --no-startup-id dmenu_run
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 bindsym $mod+e			exec --no-startup-id emacs
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+f fullscreen toggle
 
@@ -216,7 +235,7 @@ bindsym $mod+w			exec xcowsay "loading browser"; exec --no-startup-id $BROWSER
 #bindsym $mod+Shift+w
 
 bindsym $mod+x			exec --no-startup-id lockscreen
-bindsym $mod+Shift+x		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
+bindsym $mod+Shift+x		exec --no-startup-id reboot_commands
 
 bindsym $mod+z			gaps outer current plus 5
 bindsym $mod+Shift+z		gaps outer current minus 5
@@ -226,6 +245,11 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 ########################################
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+########################################
+# 15 - other keys
+########################################
+bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
 
 ########################################
 # 15 - workspace movement

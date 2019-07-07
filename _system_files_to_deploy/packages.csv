@@ -1,0 +1,37 @@
+Tags,Package Name,Description
+,alsa-util,sound
+,base-devel,standard selection of packages
+,dmenu,quick launching of commands
+,dunst,textbox that hovers and shows information send by "notify_send"
+,feh,lightweight image viewer
+,fish,shell with enabled autocompletion
+,fzf,fuzzy finder will quickly search a big list
+,git,for the commiting
+,htop,computer resource utilization
+,i3-gaps,the tiling window manager
+,i3blocks,customizable top row
+,i3lock,lock screen in i3
+,imagemagick,image editing
+,libnotify,provides the "notify-send" command
+,ranger,file browser
+,scrot,take screenshots
+,sxiv,image viewier
+,tmux,terminal that can spawn multiple processes (like iTerm2)
+,ttf-inconsolata,monoscape font
+,ttf-linux-libertine,sans font
+,unclutter,remove cursor from screen
+,vim,when emacs is too bloated
+,w3m,image viewer for ranger
+,wget,download stuff from the web
+,xclip,accesses the copied elemets
+,xorg-server,graphical server
+,xorg-xinit,command to start graphical server
+,youtube-dl,download from youtube
+,zathura,pdf viewer
+,zathura-pdf-poppler,pdf viewer backend
+a,yandex-disk,cloud syncing
+a,xcowsay,cute little cow
+a,screenkey,way to see screenkeys
+a,ttf-tahoma,
+a,ttf-emojione,emoji symbols
+a,ttf-symbola,even more unicode symbols
