@@ -1,0 +1,43 @@
+#!/bin/sh
+#  ____                          _                        
+# |  _ \  _ __  ___   _ __    __| |  ___ __      __ _ __  
+# | | | || '__|/ _ \ | '_ \  / _` | / _ \\ \ /\ / /| '_ \ 
+# | |_| || |  | (_) || |_) || (_| || (_) |\ V  V / | | | |
+# |____/ |_|   \___/ | .__/  \__,_| \___/  \_/\_/  |_| |_|
+#                    |_|                                  
+#  __  __                     
+# |  \/  |  ___  _ __   _   _ 
+# | |\/| | / _ \| '_ \ | | | |
+# | |  | ||  __/| | | || |_| |
+# |_|  |_| \___||_| |_| \__,_|
+#                             
+#
+# __ PARAMETERS __
+# $1		scruot for the suckless terminal to run
+# $2,3		parameters for the script
+#
+# __ DESCRIPTION __
+# Toggle floating dropdown terminal in i3, or start if non-existing.
+# Terminal names are in dropdown_* to allow easily setting i3 settings.
+
+# 1 - exit if command does not exist
+[ -z "$1" ] && exit
+
+# 2 - store name of script to run and shift rest of argumets
+SCRIPT=$1
+shift
+
+# 3 - check the currently spawned windows and look for dropdown_SCRIPTNAME
+if xwininfo -tree -root | grep "(\"$SCRIPT\"";
+then
+    # a - if window exists, make i3 show the dropdown meny and center it
+    i3 "[instance=\"$SCRIPT\"] scratchpad show; move position center"
+    xcowsay reopen $SCRIPT
+else
+    # b - if window does not exist, tell i3 to spawn a new st terminal
+    # ⦿ giving a name "-n $SCRIPT"
+    # ⦿ passing all parameters "$@
+    # ⦿ and executing the script "-e $SCRIPT"
+    i3 "exec --no-startup-id $TERMINAL -n $SCRIPT $@ -e $SCRIPT"
+    xcowsay created dd_$SCRIPT
+fi
