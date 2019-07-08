@@ -20,9 +20,12 @@ exec --no-startup-id feh --bg-scale ~/.config/wall.png
 # c - hides the mouse after a while
 exec --no-startup-id unclutter
 
-# d - start dunst, term
+# d - start dunst (notify-send), term
 exec --no-startup-id dunst
 exec $term
+
+# e- srat mpd
+exec --no-startup-id mpd
 
 # Run the script to update the mpd i3block on change.
 #exec_always --no-startup-id mpdupdate
