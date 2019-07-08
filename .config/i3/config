@@ -217,6 +217,10 @@ bindsym Control+XF86AudioLowerVolume	exec --no-startup-id lmc down 1
 bindsym XF86AudioRaiseVolume		exec --no-startup-id lmc up 5
 bindsym Shift+XF86AudioRaiseVolume	exec --no-startup-id lmc up 10
 bindsym Control+XF86AudioRaiseVolume	exec --no-startup-id lmc up 1
+bindsym XF86AudioNext			exec --no-startup-id lmc next
+bindsym XF86AudioPlay			exec --no-startup-id lmc toggle
+bindsym XF86AudioPrev			exec --no-startup-id lmc prev
+bindsym XF86AudioStop			exec --no-startup-id lmc toggle
 
 ########################################
 # 15 - workspace movement
@@ -235,6 +239,18 @@ bindsym $mod+Shift+XF86Back	move container to workspace prev
 bindsym $mod+XF86Forward	workspace next
 bindsym $mod+Shift+XF86Forward	move container to workspace next
 bindsym $mod+semicolon		workspace next
+bindsym $mod+Left		focus left
+bindsym $mod+Ctrl+Left		move workspace to output left
+bindsym $mod+Down		focus down
+bindsym $mod+Ctrl+Down		move workspace to output down
+bindsym $mod+Up			focus up
+bindsym $mod+Ctrl+Up		move workspace to output up
+bindsym $mod+Right 		focus right
+bindsym $mod+Ctrl+Right		move workspace to output right
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right 	move right
 #bindsym $mod+apostrophe		split horizontal ;; exec $term
 #bindsym $mod+backslash		split vertical ;; exec $term
 bindsym $mod+Shift+slash	kill
