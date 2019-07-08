@@ -1,11 +1,24 @@
 #!/bin/sh
+#  __  __                                                __ 
+# |  \/  |  ___  _ __ ___    ___   _ __  _   _    ___   / _|
+# | |\/| | / _ \| '_ ` _ \  / _ \ | '__|| | | |  / _ \ | |_ 
+# | |  | ||  __/| | | | | || (_) || |   | |_| | | (_) ||  _|
+# |_|  |_| \___||_| |_| |_| \___/ |_|    \__, |  \___/ |_|  
+#                                        |___/              
+#  ____      _     __  __ 
+# |  _ \    / \   |  \/  |
+# | |_) |  / _ \  | |\/| |
+# |  _ <  / ___ \ | |  | |
+# |_| \_\/_/   \_\|_|  |_|
+#                         
+# shows the used memory
 
+# 1 - handle clicking on the icon: 1=left, 3=right
 case $BLOCK_BUTTON in
-	1) notify-send "<b>🧠 Memory hogs:</b>
-$(ps axch -o cmd:15,%mem --sort=-%mem | head)" ;;
-	3) notify-send "<b>🧠 Memory module:</b>
-- Shows Memory Used/Total.
+	1) notify-send "🧠 Memory hogs" "$(ps axch -o cmd:15,%mem --sort=-%mem | head)" ;;
+	3) notify-send "🧠 Memory module" "\- Shows Memory Used/Total.
 - Click to show memory hogs." ;;
 esac
 
+# 2 - handle output to status bar
 free -h | awk '/^Mem:/ {print $3 "/" $2}'

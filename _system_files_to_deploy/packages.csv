@@ -13,6 +13,9 @@ Tags,Package Name,Description
 ,i3lock,lock screen in i3
 ,imagemagick,image editing
 ,libnotify,provides the "notify-send" command
+,mpv,music play single files
+,mpd,music player daemon
+,mpc,command line interface for mpd
 ,pulseaudio,audio server
 ,pulsemixer,way to issue commands
 ,ranger,file browser
