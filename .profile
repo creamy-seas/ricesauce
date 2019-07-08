@@ -4,8 +4,8 @@
 export EDITOR="emacs"
 export BROWSER="firefox"
 export READER="zathura"
-export PATH="$(du $HOME/.scripts | awk '{print $2}' | tr "\n" ":")$PATH"
 export TERMINAL="st"
+export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")$PATH"
 
 # 2 - less/man colors
 export LESS=-R

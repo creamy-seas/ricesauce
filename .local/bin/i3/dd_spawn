@@ -32,12 +32,10 @@ if xwininfo -tree -root | grep "(\"$SCRIPT\"";
 then
     # a - if window exists, make i3 show the dropdown meny and center it
     i3 "[instance=\"$SCRIPT\"] scratchpad show; move position center"
-    xcowsay reopen $SCRIPT
 else
     # b - if window does not exist, tell i3 to spawn a new st terminal
     # ⦿ giving a name "-n $SCRIPT"
     # ⦿ passing all parameters "$@
     # ⦿ and executing the script "-e $SCRIPT"
     i3 "exec --no-startup-id $TERMINAL -n $SCRIPT $@ -e $SCRIPT"
-    xcowsay created dd_$SCRIPT
 fi

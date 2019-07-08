@@ -77,7 +77,7 @@ client.background $black
 # 11 - position the status bar - REQUIRES i3blocks
 ########################################
 bar {
-	font pango:mono 10
+	font pango:mono 14
 	colors {
 			background $darkblack
 			statusline $darkwhite
@@ -173,8 +173,9 @@ bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id i3win
 #bindsym $mod+p			exec --no-startup-id lmc toggle
 #bindsym $mod+Shift+p		exec --no-startup-id lmc pause
 
-# bindsym $mod+q
-bindsym $mod+Shift+q kill
+# close everything appart from drop down calc
+bindsym $mod+q			[con_id="__focused__" instance="^(?!dd_calc|OTHER).*$"] kill
+bindsym $mod+Shift+q		kill
 
 bindsym $mod+r 			exec $term -e ranger
 bindsym $mod+Shift+r restart
