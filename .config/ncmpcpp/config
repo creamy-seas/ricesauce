@@ -62,7 +62,7 @@ mpd_music_dir = "~/Music"
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-#visualizer_in_stereo = yes
+visualizer_in_stereo = no
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp has to "synchronize"
@@ -393,7 +393,7 @@ visualizer_type = spectrum
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-startup_screen = media_library
+startup_screen = tag_editor
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
