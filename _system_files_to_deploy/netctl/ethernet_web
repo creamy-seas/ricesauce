@@ -1,5 +1,5 @@
 Description='Connect this computer to the web and cause collateral damage'
-Interface=enp7s0
+Interface=enp26s0
 Connection=ethernet
 IP=static
 Address=('192.168.0.1/20')

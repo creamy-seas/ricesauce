@@ -1,5 +1,5 @@
 Description='Connect to devices in the lab'
-Interface=enp8s0
+Interface=enp25s0
 Connection=ethernet
 IP=static
 Address=('134.219.128.96/20')
