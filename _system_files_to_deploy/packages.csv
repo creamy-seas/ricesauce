@@ -5,6 +5,7 @@ Tags,Package Name,Description
 ,dunst,textbox that hovers and shows information send by "notify_send"
 ,feh,lightweight image viewer
 ,fish,shell with enabled autocompletion
+,firefox,browser
 ,fzf,fuzzy finder will quickly search a big list
 ,git,for the commiting
 ,htop,computer resource utilization
