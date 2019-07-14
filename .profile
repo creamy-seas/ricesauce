@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # 1 - variables to set on login
-export EDITOR="emacs"
+export EDITOR="emacsclient -t"	# opening emacs in terminal
+export VISUAL="emacsclient -c -a emacs" # open emacs in gui
 export BROWSER="firefox"
 export READER="zathura"
 export TERMINAL="st"
