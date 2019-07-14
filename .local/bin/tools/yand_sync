@@ -1,0 +1,94 @@
+#!/bin/bash
+
+ALL_FOLDERS="all_folders.txt"
+SYNC_FOLDERS="folders_to_sync.txt"
+NOSYNC_FOLDERS="folders_no_sync.txt"
+cd ~/creamy_seas/sync_files/yandex_disk
+
+########################################
+# 1 - generate current configuration if it doesn't exist
+########################################
+if ! [ -e $SYNC_FOLDERS ]; then
+    touch $SYNC_FOLDERS
+fi
+
+########################################
+# 2 - query user for to add or remove folders
+########################################
+CHOICE=$(echo -e "✔ Add\n✘ Remove\nStart\nStop\nSync" | dmenu -i -p "Yandex Disk choice: ")
+
+########################################
+# 3 - add
+########################################
+if [[ $CHOICE == "✔ Add" ]]; then
+    
+    # 3a - combine all_folders and currently synced folders to determine new entires to prompt for
+    sort $ALL_FOLDERS $SYNC_FOLDERS | uniq -u > "temp_dmenu.txt"
+    cp $SYNC_FOLDERS "temp_add.txt"
+    SELECTION_DONE="false"
+
+    # 3b - keep asking user to select folders to add
+    while [[ $SELECTION_DONE == "false" ]]; do
+
+	# 3c - print list of folders, and store the ones selected by user
+	CHOSEN_FOLDER=$(echo -e "$(cat temp_dmenu.txt)\n⦿ DONE" | dmenu -i -l 10 -p "Choose folders to sync ✔: ")
+
+	if [[ $CHOSEN_FOLDER == "⦿ DONE" ]]; then
+	    SELECTION_DONE="true"
+	else
+	    # 3d - delete this from the dmenu prompt file and add to the "temp_add.txt" file
+	    sed -i "/^$CHOSEN_FOLDER/d" "temp_dmenu.txt"
+	    echo $CHOSEN_FOLDER >> "temp_add.txt"
+	fi
+    done
+
+    # 3e - remove duplicates
+    sort "temp_add.txt" | uniq > $SYNC_FOLDERS
+
+########################################
+# 4 - remove
+########################################    
+elif [[ $CHOICE == "✘ Remove" ]]; then
+
+    SELECTION_DONE="false"
+    
+    # 4a - keep asking user to select folders to remove
+    while [[ $SELECTION_DONE == "false" ]]; do
+
+	# 4b - print list of folders, and store the ones selected by user
+	CHOSEN_FOLDER=$(echo -e "$(cat $SYNC_FOLDERS)\n⦿ DONE" | dmenu -i -l 10 -p "Choose folders to remove ✘: ")
+
+	if [[ $CHOSEN_FOLDER == "⦿ DONE" ]]; then
+	    SELECTION_DONE="true"
+	else
+	    # 4c - delete folder
+	    sed -i "/^$CHOSEN_FOLDER/d" $SYNC_FOLDERS
+	fi
+    done
+elif [[ $CHOICE == "Start" ]]; then
+    yandex-disk start
+
+elif [[ $CHOICE == "Stop" ]]; then
+    yandex-disk stop
+    
+elif [[ $CHOICE == "Sync" ]]; then
+    yandex-disk sync
+fi
+
+########################################
+# 5 - at this stage there is a list of directories to sync - remove these from the full list of directories
+########################################
+sort $ALL_FOLDERS $SYNC_FOLDERS | uniq -u > $NOSYNC_FOLDERS
+
+########################################
+# 5 - expand the full path for the directories and flatten
+########################################
+sed "s|^|$HOME/creamy_seas/|" $NOSYNC_FOLDERS > "temp_expanded.txt"
+EXCLUDE_DIR=$(cat "temp_expanded.txt" | tr "\n" ",")
+
+########################################
+# 6 - write to yandex config file
+########################################
+sed -i "s|^exclude-dirs.*$|exclude-dirs=\"$EXCLUDE_DIR\"|" "$HOME/.config/yandex-disk/config.cfg"
+
+rm "temp_expanded.txt" "temp_add.txt" "temp_dmenu.txt" 2>/dev/null

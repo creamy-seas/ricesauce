@@ -162,10 +162,15 @@
 #def_key "down"
 #  scroll_down
 #
-#def_key "shift-down"
+def_key "shift-down"
+  select_item
+  scroll_down
+def_key "shift-j"
+	select_item
+	scroll_down
+#def key "shift-k"
 #  select_item
-#  scroll_down
-#
+#  scroll_up
 #def_key "["
 #  scroll_up_album
 #
@@ -431,7 +436,8 @@
 #def_key "I"
 #  show_artist_info
 #
-#def_key "g"
+def_key "g"
+   jump_to_browser
 #  jump_to_position_in_song
 #
 #
@@ -519,7 +525,8 @@
 #def_key "alt-l"
 #  toggle_fetching_lyrics_in_background
 #
-#def_key "ctrl-l"
+def_key "ctrl-l"
+	dummy
 #  toggle_screen_lock
 #
 #def_key "`"
@@ -534,16 +541,21 @@
 #def_key "ctrl-p"
 #  set_selected_items_priority
 #
-#def_key "q"
-#  quit
-#
-
-def_key "+"
-	show_clock
 
 ########################################
 # Navigation
 ########################################
+def_key "ctrl-n"
+	scroll_down
+
+def_key "ctrl-p"
+	scroll_up
+
+def_key "ctrl-v"
+	page_down
+def_key "alt-v"
+	page_up
+
 def_key "j"
 	scroll_down
 
@@ -557,3 +569,34 @@ def_key "h"
 def_key "l"
 	next_column
 
+def_key "ctrl-u"
+	page_up
+
+def_key "ctrl-d"
+	page_down
+
+def_key "n"
+	next_found_item
+def_key "N"
+	previous_found_item
+
+def_key "t"
+	show_tag_editor
+########################################
+# Deletion
+########################################
+def_key "d"
+	delete_playlist_items
+def_key "d"
+	delete_browser_items
+def_key "d"
+	delete_stored_playlist
+
+########################################
+# Quit
+########################################
+def_key "q"
+  dummy
+def_key "Q"
+  stop
+  quit

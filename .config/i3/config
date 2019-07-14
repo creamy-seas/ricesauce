@@ -27,6 +27,8 @@ exec $term
 # e- srat mpd
 exec --no-startup-id mpd
 
+# f - start yandex disk
+
 # Run the script to update the mpd i3block on change.
 #exec_always --no-startup-id mpdupdate
 # mpd startup
@@ -165,7 +167,7 @@ bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 #bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 
-#bindsym $mod+y			exec $term -e calcurse
+bindsym $mod+y			exec --no-startup-id yand_sync
 bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 
 bindsym $mod+m 			exec --no-startup-id $term -e ncmpcpp
