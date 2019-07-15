@@ -12,7 +12,6 @@ learn_to_kode
 monday_starts_on_saturday
 muhself
 music_db
-sync_files
 vgoptics
 vult
 work_and_application
