@@ -18,6 +18,7 @@ Tags,Package Name,Description
 ,mpd,music player daemon
 ,mpc,lightweight command line interface for mpd
 ,ncmpcpp,poweful interface for mpd
+,openssh,connection
 ,pulseaudio,audio server
 ,pulsemixer,way to issue commands
 ,ranger,file browser
