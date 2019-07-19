@@ -22,11 +22,11 @@ ALIAS="MACMINI"
 echo "    → Looking for \"$ALIAS\" connection"
 EXISTING_CONNECTION=$(ps aux | grep "ssh.*$COMPUTER" | grep -v "grep")
 
-if [[ $EXISTING_CONNECTION]]; then
+if [[ $EXISTING_CONNECTION ]]; then
     echo '⦿⦿⦿⦿ → \"$ALIAS\" is already connected'
 else
     echo '⦿⦿⦿⦿ → Connecting to \"$ALIAS\"'
-    sudo ssh -f -N -R $PORT:localhost:22 $COMPUTER -p 22
+    sudo ssh -f -N -R 2410:localhost:22 $COMPUTER -p $PORT
 fi
     
 echo "⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿"
