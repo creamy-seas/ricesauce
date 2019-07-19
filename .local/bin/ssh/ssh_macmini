@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#                                     _         _                       _   
+#  _ __ ___    __ _   ___  _ __ ___  (_) _ __  (_)  _ __    ___   _ __ | |_ 
+# | '_ ` _ \  / _` | / __|| '_ ` _ \ | || '_ \ | | | '_ \  / _ \ | '__|| __|
+# | | | | | || (_| || (__ | | | | | || || | | || | | |_) || (_) || |   | |_ 
+# |_| |_| |_| \__,_| \___||_| |_| |_||_||_| |_||_| | .__/  \___/ |_|    \__|
+#                                                  |_|                      
+#   __  _____  __  _____ 
+#  / /_|___  |/ /_|___  |
+# | '_ \  / /| '_ \  / / 
+# | (_) |/ / | (_) |/ /  
+#  \___//_/   \___//_/   
+#                        
+# 
+
+PORT=6767
+COMPUTER="CCCP@86.20.96.166"
+ALIAS="MACMINI"
+
+# 1 - look for established connection
+echo "    → Looking for \"$ALIAS\" connection"
+EXISTING_CONNECTION=$(ps aux | grep "ssh.*$COMPUTER" | grep -v "grep")
+
+if [[ $EXISTING_CONNECTION]]; then
+    echo '⦿⦿⦿⦿ → \"$ALIAS\" is already connected'
+else
+    echo '⦿⦿⦿⦿ → Connecting to \"$ALIAS\"'
+    sudo ssh -f -N -R $PORT:localhost:22 $COMPUTER -p 22
+fi
+    
+echo "⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿"
