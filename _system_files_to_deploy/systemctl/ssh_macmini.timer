@@ -1,7 +1,6 @@
 [Unit]
 Descrition=Timer for the macmini
 Requires=ssh_macmini.service
-BindsTo=ssh_macmini.service
 
 [Timer]
 OnBootSec=1

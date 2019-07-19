@@ -1,7 +1,6 @@
 [Unit]
 Descrition=Timer for the macmini
 Requires=ssh_thinkpad.service
-BindsTo=ssh_thinkpad.service
 
 [Timer]
 OnBootSec=1
