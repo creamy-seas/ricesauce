@@ -17,5 +17,7 @@
 # 1 - change to current directory
 cd "$(dirname "$0")"
 
-for i in "services.csv":
-	 echo $i
+for i in "services.csv"; do
+    echo $i
+done
+
