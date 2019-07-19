@@ -17,7 +17,20 @@
 # 1 - change to current directory
 cd "$(dirname "$0")"
 
-for i in "services.csv"; do
-    echo $i
-done
+# 2 - reload the daemon to apply any pending changes
+sudo systemctl daemon-reload
+
+# 3 - stop and disable everything
+echo "⦿ Disabling everything"
+while IFS=, read -r PROGRAM DESC; do
+    sudo systemctl stop $PROGRAM
+    sudo systemctl disable $PROGRAM
+done < "services.csv"
+
+# 4 - enable everything
+echo "⦿ Enabling"
+while IFS=, read -r PROGRAM DESC; do
+    sudo systemctl enable $PROGRAM
+    sudo systemctl start $PROGRAM
+done < "services.csv"
 
