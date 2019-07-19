@@ -19,7 +19,6 @@ COMPUTER="thinker@86.20.96.166"
 ALIAS="THINKPAD"
 
 # 1 - look for established connection
-echo "    → Looking for \"$ALIAS\" connection"
 EXISTING_CONNECTION=$(ps aux | grep "ssh.*$COMPUTER" | grep -v "grep")
 
 if [[ $EXISTING_CONNECTION ]]; then
