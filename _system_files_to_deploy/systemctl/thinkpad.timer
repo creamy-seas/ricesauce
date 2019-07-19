@@ -1,0 +1,12 @@
+[Unit]
+Descrition=Timer for the macmini
+Requires=thinkpad.service
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=20
+Unit=thinkpad.service
+WakeSystem=true
+
+[Install]
+WantedBy=multi-user.target
