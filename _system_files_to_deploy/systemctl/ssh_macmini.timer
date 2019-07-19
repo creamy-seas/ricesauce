@@ -1,0 +1,13 @@
+[Unit]
+Descrition=Timer for the macmini
+Requires=ssh_macmini.service
+BindsTo=ssh_macmini.service
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=20
+Unit=ssh_macmini.service
+WakeSystem=true
+
+[Install]
+WantedBy=multi-user.target

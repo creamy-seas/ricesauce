@@ -1,0 +1,13 @@
+[Unit]
+Description=Open portal to macmini
+After=sshd.service
+Requires=sshd.service
+BindsTo=sshd.service
+
+[Service]
+TimeoutStartSec=7
+Type=forking
+ExecStart=/home/antonov/.local/bin/ssh/ssh_macmini
+
+[Install]
+WantedBy=multi-user.target
