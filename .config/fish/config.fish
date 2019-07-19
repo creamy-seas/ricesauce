@@ -4,7 +4,7 @@ bass source ~/.profile
 
 #test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-abbr sctl "sudo systemctl"
+abbr sc "sudo systemctl"
 abbr pc "sudo pacman -S"
 abbr xc "xcowsay"
 abbr emacs "exec emacs"
