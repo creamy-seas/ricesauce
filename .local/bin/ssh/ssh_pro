@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#  __  __     _     ____  ____    ___    ___   _  __  ____   _  _    _   ___  
+# |  \/  |   / \   / ___|| __ )  / _ \  / _ \ | |/ / |___ \ | || |  / | / _ \ 
+# | |\/| |  / _ \ | |    |  _ \ | | | || | | || ' /    __) || || |_ | || | | |
+# | |  | | / ___ \| |___ | |_) || |_| || |_| || . \   / __/ |__   _|| || |_| |
+# |_|  |_|/_/   \_\\____||____/  \___/  \___/ |_|\_\ |_____|   |_|  |_| \___/ 
+#                                                                             
+# 
+
+PORT=2410
+COMPUTER="CCCP@86.20.96.166"
+ALIAS="MACBOOK"
+
+# 1 - look for established connection
+EXISTING_CONNECTION=$(ps aux | grep "ssh.*$COMPUTER" | grep -v "grep")
+
+if [[ $EXISTING_CONNECTION ]]; then
+    echo "⦿⦿⦿⦿ → \"$ALIAS\" is already connected"
+else
+    echo "⦿⦿⦿⦿ → Connecting to \"$ALIAS\""
+    sudo ssh -f -N -R 2410:localhost:22 $COMPUTER -p $PORT
+fi
+    
+echo "⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿"
+

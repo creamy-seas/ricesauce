@@ -1,0 +1,12 @@
+[Unit]
+Descrition=Timer for the macmini
+Requires=ssh_thinkpad.service
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=20
+Unit=ssh_thinkpad.service
+WakeSystem=true
+
+[Install]
+WantedBy=multi-user.target
