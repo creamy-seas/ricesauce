@@ -1,0 +1,4 @@
+ssh_thinker.service,connection to thinkpad
+ssh_thinker.timer,timer of above
+ssh_macmini.service,connection to macmini
+ssh_macmini.timer,timer to above
