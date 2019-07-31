@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#  ____   ____    ___   _____  ___  _      _____ 
+# |  _ \ |  _ \  / _ \ |  ___||_ _|| |    | ____|
+# | |_) || |_) || | | || |_    | | | |    |  _|  
+# |  __/ |  _ < | |_| ||  _|   | | | |___ | |___ 
+# |_|    |_| \_\ \___/ |_|    |___||_____||_____|
+#
+
 # 1 - variables to set on login
 export EDITOR="emacsclient -t"	# opening emacs in terminal
 export VISUAL="emacsclient -c -a emacs" # open emacs in gui
