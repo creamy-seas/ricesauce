@@ -7,7 +7,7 @@ BindsTo=sshd.service
 [Service]
 TimeoutStartSec=7
 Type=forking
-ExecStart=/home/antonov/.local/bin/ssh/ssh_thinkpad
+ExecStart=/home/antonov/.local/bin/ssh/ssh_pro
 
 [Install]
 WantedBy=multi-user.target

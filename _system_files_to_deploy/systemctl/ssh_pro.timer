@@ -1,11 +1,11 @@
 [Unit]
-Descrition=Timer for the macmini
-Requires=ssh_thinkpad.service
+Descrition=Connection to macbook pro
+Requires=ssh_pro.service
 
 [Timer]
 OnBootSec=1
 OnUnitActiveSec=20
-Unit=ssh_thinkpad.service
+Unit=ssh_pro.service
 WakeSystem=true
 
 [Install]

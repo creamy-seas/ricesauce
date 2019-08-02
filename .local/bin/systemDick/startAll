@@ -29,8 +29,10 @@ done < "services.csv"
 
 # 4 - enable everything
 echo "⦿ Enabling"
-while IFS=, read -r PROGRAM DESC; do
-    sudo systemctl enable $PROGRAM
-    sudo systemctl start $PROGRAM
+while IFS=, read -r PROGRAM DESC ONOFF; do
+    if [[ $ONOFF == on ]]; then
+	sudo systemctl enable $PROGRAM
+	sudo systemctl start $PROGRAM
+    fi
 done < "services.csv"
 

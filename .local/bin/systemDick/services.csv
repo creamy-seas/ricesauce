@@ -1,4 +1,7 @@
-ssh_pro.service,connection to thinkpad
-ssh_pro.timer,timer of above
-ssh_macmini.service,connection to macmini
-ssh_macmini.timer,timer to above
+ssh_pro.service,connection to thinkpad,on
+ssh_pro.timer,timer of above,on
+ssh_macmini.service,connection to macmini,on
+ssh_macmini.timer,timer to above,on
+ssh_thinkpad.service,connection to thinkpad,off
+ssh_thinkpad.timer,timer to above,off
+

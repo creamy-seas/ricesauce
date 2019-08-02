@@ -4,7 +4,7 @@ Description=Boomer USA service
 [Service]
 TimeoutSec=infinity
 Type=forking
-ExecStart=/home/antonov/.ilya_scripts/boomer_usa.sh
+ExecStart=/home/antonov/.local/bin/cool/boomer_usa.sh
 
 [Install]
 WantedBy=multi-user.target
