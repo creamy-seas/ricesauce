@@ -1,5 +1,5 @@
 [Unit]
-Descrition=Connection to macbook pro
+Descrition=Timer for MACBOOKPRO 🚽
 Requires=ssh_pro.service
 
 [Timer]

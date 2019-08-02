@@ -1,5 +1,5 @@
 [Unit]
-Description=Open portal to macmini
+Description=Open portal to macmini 🐢
 After=sshd.service
 Requires=sshd.service
 BindsTo=sshd.service

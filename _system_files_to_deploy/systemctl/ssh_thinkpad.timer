@@ -1,5 +1,5 @@
 [Unit]
-Descrition=Timer for the macmini
+Descrition=Timer for the thinkpad 🧱
 Requires=ssh_thinkpad.service
 
 [Timer]

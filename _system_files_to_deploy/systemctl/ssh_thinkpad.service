@@ -1,5 +1,5 @@
 [Unit]
-Description=Open portal to thinkpad
+Description=Open portal to thinkpad 🧱
 After=sshd.service
 Requires=sshd.service
 BindsTo=sshd.service
