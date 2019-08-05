@@ -13,7 +13,8 @@ export VISUAL="emacsclient -c -a emacs" # open emacs in gui
 export BROWSER="firefox"
 export READER="zathura"
 export TERMINAL="st"
-export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")$PATH"
+export PATH="/usr/local/cuda/bin:$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib"
 
 # 2 - less/man colors
 export LESS=-R

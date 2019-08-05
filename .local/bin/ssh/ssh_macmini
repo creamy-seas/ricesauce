@@ -15,7 +15,7 @@
 # 
 
 PORT=6767
-COMPUTER="CCCP@86.20.96.166"
+COMPUTER="ilyaantonov@86.20.96.166"
 ALIAS="MACMINI"
 
 # 1 - look for established connection
